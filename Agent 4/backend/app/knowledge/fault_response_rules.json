@@ -1,0 +1,24 @@
+{
+  "isolation_rules": [
+    {
+      "fault_type": "THREE_PHASE_SHORT",
+      "primary_action": "Trip both breakers on the affected line section.",
+      "breaker_operation_time_max_ms": 50,
+      "backup_action_if_breaker_fails": "Trip all adjacent substation bus breakers (Breaker Failure Protection - IEEE 50BF) within 150ms."
+    },
+    {
+      "fault_type": "LINE_TO_GROUND",
+      "primary_action": "Perform single-phase trip and reclose (if temporary fault is expected).",
+      "reclose_dead_time_ms": 500,
+      "reclose_attempts": 1
+    },
+    {
+      "fault_type": "TRANSFORMER_INTERNAL",
+      "primary_action": "Trip primary and secondary breakers, lock out automatic reclosing, and trigger transformer cooling shutdown."
+    },
+    {
+      "fault_type": "BUS_FAULT",
+      "primary_action": "Trip all breakers connected to the fault bus segment immediately."
+    }
+  ]
+}

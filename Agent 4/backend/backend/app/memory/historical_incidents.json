@@ -1,0 +1,38 @@
+[
+  {
+    "incident_id": "hist-001",
+    "equipment_id": "T1",
+    "fault_type": "TRANSFORMER_OVERHEAT",
+    "severity": "CRITICAL",
+    "current_rms": 1.1,
+    "voltage_pu": 0.96,
+    "harmonics_thd": 1.2,
+    "root_cause": "High ambient temperature combined with sustained peak overload. Cooling fan relay failed to start.",
+    "restoration_strategy": "Shed 15MW load from secondary terminals and trigger manual override of backup radiator fan group.",
+    "ieee_reference": "IEEE C57.104"
+  },
+  {
+    "incident_id": "hist-002",
+    "equipment_id": "L1",
+    "fault_type": "LINE_TO_GROUND",
+    "severity": "CRITICAL",
+    "current_rms": 5.2,
+    "voltage_pu": 0.25,
+    "harmonics_thd": 9.4,
+    "root_cause": "Lightning strike during storm causing insulator flashover on Section 4 of Line L1.",
+    "restoration_strategy": "Isolate line L1 by tripping breakers B1A/B1B. Reroute load through Line L5 tie breaker B5A.",
+    "ieee_reference": "IEEE C37.113 (IEEE-21 Protection)"
+  },
+  {
+    "incident_id": "hist-003",
+    "equipment_id": "T4",
+    "fault_type": "INSULATION_BREAKDOWN",
+    "severity": "CRITICAL",
+    "current_rms": 1.3,
+    "voltage_pu": 0.98,
+    "harmonics_thd": 2.2,
+    "root_cause": "Dissolved hydrogen gas build-up due to internal arcing, degrading paper winding insulation.",
+    "restoration_strategy": "Isolate Autotransformer T4 and transfer load to adjacent substations via 230kV loops.",
+    "ieee_reference": "IEEE C57.104"
+  }
+]

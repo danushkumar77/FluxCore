@@ -1,0 +1,12 @@
+[
+    {
+        "code": "SAFETY-PROC-LOCKOUT",
+        "title": "Lockout Tagout (LOTO) Procedures",
+        "description": "Establishes compliance for isolating assets before dispatching maintenance crews. Grid breaker must be physically locked.",
+        "tags": ["safety", "maintenance", "loto"],
+        "parameters": {
+            "required_verifier": "Maintenance Lead",
+            "min_clearance_sec": 300
+        }
+    }
+]

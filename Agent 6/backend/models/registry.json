@@ -1,0 +1,80 @@
+{
+  "models": {
+    "price_forecast": {
+      "version": "1.0.0",
+      "last_trained": "2026-07-28 17:12:04",
+      "metrics": {
+        "mae": 0.0225,
+        "rmse": 0.0358,
+        "mape": 8.0001,
+        "r2": 0.917
+      },
+      "features": [
+        "demand_kw",
+        "solar_gen_kw",
+        "hour",
+        "day_of_week"
+      ],
+      "status": "DRIFT_DETECTED"
+    },
+    "cost_prediction": {
+      "version": "1.0.0",
+      "last_trained": "2026-07-28 17:12:04",
+      "metrics": {
+        "mae": 11.7649,
+        "rmse": 17.1297,
+        "mape": 4.8942,
+        "r2": 0.9685
+      },
+      "features": [
+        "predicted_price",
+        "demand_forecast",
+        "battery_soc"
+      ],
+      "status": "DRIFT_DETECTED"
+    },
+    "strategy_recommendation": {
+      "version": "1.0.0",
+      "last_trained": "2026-07-28 17:12:04",
+      "metrics": {
+        "accuracy": 0.9479,
+        "f1_score": 0.9376
+      },
+      "features": [
+        "buying_price",
+        "selling_price",
+        "renewable_ratio",
+        "battery_soc"
+      ],
+      "status": "DRIFT_DETECTED"
+    },
+    "carbon_optimization": {
+      "version": "1.0.0",
+      "last_trained": "2026-07-28 17:12:04",
+      "metrics": {
+        "mae": 7.9061,
+        "rmse": 10.5414,
+        "r2": 0.8964
+      },
+      "features": [
+        "grid_import_kwh",
+        "renewable_kwh"
+      ],
+      "status": "DRIFT_DETECTED"
+    },
+    "market_opportunity": {
+      "version": "1.0.0",
+      "last_trained": "2026-07-28 17:12:04",
+      "metrics": {
+        "precision": 0.9067,
+        "recall": 0.8758
+      },
+      "features": [
+        "price_spread",
+        "volatility",
+        "peak_ratio"
+      ],
+      "status": "DRIFT_DETECTED"
+    }
+  }
+}

@@ -1,0 +1,1 @@
+["solar_irradiance", "cloud_cover", "solar_zenith_angle", "solar_efficiency_index", "cloud_attenuation_factor", "solar_irradiance_lag_1h", "solar_irradiance_lag_24h", "hour_sin", "hour_cos", "day_sin", "day_cos", "temperature", "cloud_cover_roll_mean_3h", "cloud_cover_roll_std_3h"]

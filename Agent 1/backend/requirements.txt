@@ -1,0 +1,13 @@
+fastapi[standard]
+uvicorn[standard]
+pandas
+numpy
+scikit-learn
+xgboost
+joblib
+sqlalchemy[asyncio]
+aiosqlite
+google-genai
+python-dotenv
+pydantic
+pydantic-settings

@@ -1,0 +1,18 @@
+{
+  "grid_carbon_intensity_kg_co2_per_kwh": 0.385,
+  "solar_carbon_intensity_kg_co2_per_kwh": 0.045,
+  "wind_carbon_intensity_kg_co2_per_kwh": 0.012,
+  "carbon_credit_value_usd_per_kg": 0.025,
+  "compliance": {
+    "minimum_renewable_mix_pct": 50.0,
+    "penalty_per_excess_kg_co2": 0.08
+  },
+  "incentives": {
+    "solar_generation_rebate_per_kwh": 0.015,
+    "green_rating_thresholds": {
+      "excellent": 90,
+      "good": 75,
+      "satisfactory": 50
+    }
+  }
+}

@@ -1,0 +1,21 @@
+[
+    {
+        "code": "PROT-RULE-OVERCURRENT",
+        "title": "Overcurrent Relay Tripping Scheme",
+        "description": "IEEE C37.91 compliant transformer protection. Immediate breaker trip if current exceeds 150% rating.",
+        "tags": ["protection", "relay", "breaker"],
+        "parameters": {
+            "instantaneous_trip_pct": 150.0,
+            "timed_trip_delay_sec": 0.5
+        }
+    },
+    {
+        "code": "PROT-RULE-ISOLATION",
+        "title": "Substation Fault Section Isolation",
+        "description": "Requires double-breaker opening to isolate sections upon transformer fault.",
+        "tags": ["protection", "isolation"],
+        "parameters": {
+            "isolation_time_max_ms": 100
+        }
+    }
+]

@@ -1,0 +1,22 @@
+{
+  "rules": [
+    {
+      "id": "EMERGENCY-OVERVOLT",
+      "name": "Overvoltage Circuit Trip",
+      "max_voltage": 4.35,
+      "description": "Disconnect BESS if cell voltage exceeds 4.35V."
+    },
+    {
+      "id": "EMERGENCY-UNDERVOLT",
+      "name": "Undervoltage Circuit Trip",
+      "min_voltage": 2.50,
+      "description": "Disconnect BESS if cell voltage falls below 2.50V."
+    },
+    {
+      "id": "EMERGENCY-THERMAL-RUNAWAY",
+      "name": "Fire Suppression Trigger",
+      "temp_runaway_threshold": 65.0,
+      "description": "Activate clean-agent fire suppression system and isolate battery container from the grid when cell temperature hits 65C."
+    }
+  ]
+}

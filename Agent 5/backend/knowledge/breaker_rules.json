@@ -1,0 +1,56 @@
+{
+  "asset_type": "CircuitBreaker",
+  "limits": {
+    "sf6_pressure": {
+      "warning": 5.8,
+      "critical": 5.2,
+      "comparator": "less_than",
+      "unit": "bar",
+      "description": "SF6 insulation gas pressure."
+    },
+    "contact_wear": {
+      "warning": 25.0,
+      "critical": 45.0,
+      "unit": "%",
+      "description": "Electrical contact erosion level."
+    },
+    "operation_time": {
+      "warning": 50.0,
+      "critical": 65.0,
+      "unit": "ms",
+      "description": "Total interruption and contact parting timing."
+    },
+    "switching_operations": {
+      "warning": 800,
+      "critical": 1200,
+      "unit": "count",
+      "description": "Lifetime cycle trip count limits."
+    }
+  },
+  "rules": [
+    {
+      "id": "BREAKER-GAS-01",
+      "condition": "sf6_pressure < warning",
+      "action": "Inspect SF6 seals for micro-leakages",
+      "severity": "Warning"
+    },
+    {
+      "id": "BREAKER-GAS-02",
+      "condition": "sf6_pressure < critical",
+      "action": "Trigger low SF6 alarm. Top up SF6 gas immediately to prevent dielectric flashover",
+      "severity": "Critical"
+    },
+    {
+      "id": "BREAKER-WEAR-01",
+      "condition": "contact_wear > warning or operation_time > warning",
+      "action": "Schedule breaker contacts overhaul during the next planned outage window",
+      "severity": "Warning"
+    },
+    {
+      "id": "BREAKER-CYCLE-01",
+      "condition": "switching_operations > critical",
+      "action": "Schedule mandatory interrupter replacement",
+      "severity": "Critical"
+    }
+  ]
+}

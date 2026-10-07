@@ -1,0 +1,32 @@
+{
+  "Insulation Breakdown": {
+    "symptoms": ["High temperature", "C2H2 Acetylene presence", "H2 Hydrogen spike", "Breakdown voltage drop"],
+    "criticality": "Critical",
+    "corrective_actions": ["Perform oil filtration", "Dehydrate insulation paper", "Schedule visual inspection"]
+  },
+  "Oil Degradation": {
+    "symptoms": ["High moisture", "Acidity spike", "Breakdown voltage drop"],
+    "criticality": "Warning",
+    "corrective_actions": ["Dehydrate oil", "Filter contaminants"]
+  },
+  "Contact Erosion": {
+    "symptoms": ["Contact wear high", "Operation time slow"],
+    "criticality": "Warning",
+    "corrective_actions": ["Refurbish contacts", "Measure contact resistance"]
+  },
+  "SF6 Leakage": {
+    "symptoms": ["SF6 pressure drop"],
+    "criticality": "Critical",
+    "corrective_actions": ["Top up SF6 gas", "Verify and replace valve gaskets"]
+  },
+  "Blade Fatigue": {
+    "symptoms": ["High vibration", "Rotor speed anomalies"],
+    "criticality": "Critical",
+    "corrective_actions": ["Schedule structural inspection", "Calibrate blade pitch controller"]
+  },
+  "Thermal Runaway": {
+    "symptoms": ["Battery cell temperature high", "Internal resistance spike"],
+    "criticality": "Critical",
+    "corrective_actions": ["Isolate battery string", "Trigger external cooling flow"]
+  }
+}

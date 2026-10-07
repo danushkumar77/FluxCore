@@ -1,0 +1,22 @@
+[
+    {
+        "code": "MAINT-RULE-XFRM-OIL",
+        "title": "Transformer Oil Temperature & Dissolved Gas triggers",
+        "description": "Calculates asset health index. Recommends testing when temperature or gas metrics breach.",
+        "tags": ["maintenance", "transformer"],
+        "parameters": {
+            "temp_alarm_c": 85.0,
+            "max_runtime_hours_between_tests": 8760
+        }
+    },
+    {
+        "code": "MAINT-RULE-BREAKER-CYCLES",
+        "title": "Circuit Breaker Operation Cycle Wear",
+        "description": "Flags a breaker for scheduled inspection when it exceeds defined operations.",
+        "tags": ["maintenance", "breaker"],
+        "parameters": {
+            "warning_operations_count": 1000,
+            "critical_operations_count": 1500
+        }
+    }
+]

@@ -1,0 +1,243 @@
+[
+  {
+    "id": "1091f425",
+    "timestamp": "2026-07-28T16:26:13.939783Z",
+    "fault_detected": true,
+    "fault_type": "LINE_TO_LINE_TO_GROUND",
+    "severity": "CRITICAL",
+    "fault_location": "L2",
+    "distance_km": 14.52,
+    "affected_equipment": [
+      "L2"
+    ],
+    "telemetry_snapshot": {
+      "id": "L2",
+      "name": "Line S2-S5",
+      "from_substation": "S2",
+      "to_substation": "S5",
+      "voltage_pu": 0.36344381066380416,
+      "current_rms": 5.4041929266730415,
+      "frequency_hz": 60.0,
+      "active_power_mw": 43.20218870565817,
+      "reactive_power_mvar": 175.3215667817339,
+      "harmonics_thd": 11.366884319627335,
+      "power_factor": 0.98,
+      "impedance_real": 0.05,
+      "impedance_imag": 0.15,
+      "status": "FAULTED"
+    },
+    "root_cause_explanation": "Line fault on L2 triggered Instantaneous Overcurrent protection (IEEE 50 / IEEE C37.91). Phase currents spiked significantly while local voltage plummeted to critical undervoltage. Environmental condition indicates weather is STORM, making a physical lightning strike or branch contact likely.",
+    "ieee_rules_referenced": [
+      "IEEE-50-INST-OVERCURRENT"
+    ],
+    "outage_probability": 0.98,
+    "remaining_operational_time": "1093.86 Hours",
+    "proposed_plans": [
+      {
+        "plan_id": "08173be9",
+        "name": "Plan A",
+        "description": "Isolate faulted equipment and trip protection lockout breakers.",
+        "steps": [
+          {
+            "step_number": 1,
+            "action": "open_breaker",
+            "target_equipment_id": "B2A",
+            "description": "Trip breaker Breaker B2A to isolate line L2 fault.",
+            "safety_check_passed": true,
+            "executed": false,
+            "execution_timestamp": null,
+            "rollback_command": "close_breaker:B2A"
+          },
+          {
+            "step_number": 2,
+            "action": "open_breaker",
+            "target_equipment_id": "B2B",
+            "description": "Trip breaker Breaker B2B to isolate line L2 fault.",
+            "safety_check_passed": true,
+            "executed": false,
+            "execution_timestamp": null,
+            "rollback_command": "close_breaker:B2B"
+          }
+        ],
+        "safety_score": 95.0,
+        "stability_impact_score": 95.0,
+        "speed_score": 99.0,
+        "customer_impact_score": 30.0,
+        "cost_score": 95.0,
+        "total_score": 83.4,
+        "status": "PENDING"
+      },
+      {
+        "plan_id": "b25718f1",
+        "name": "Plan B",
+        "description": "Isolate fault and reroute power through alternate transmission corridors.",
+        "steps": [
+          {
+            "step_number": 1,
+            "action": "open_breaker",
+            "target_equipment_id": "B2A",
+            "description": "Trip breaker Breaker B2A to isolate line L2 fault.",
+            "safety_check_passed": true,
+            "executed": false,
+            "execution_timestamp": null,
+            "rollback_command": "close_breaker:B2A"
+          },
+          {
+            "step_number": 2,
+            "action": "open_breaker",
+            "target_equipment_id": "B2B",
+            "description": "Trip breaker Breaker B2B to isolate line L2 fault.",
+            "safety_check_passed": true,
+            "executed": false,
+            "execution_timestamp": null,
+            "rollback_command": "close_breaker:B2B"
+          }
+        ],
+        "safety_score": 95.0,
+        "stability_impact_score": 85.0,
+        "speed_score": 80.0,
+        "customer_impact_score": 90.0,
+        "cost_score": 85.0,
+        "total_score": 86.0,
+        "status": "PENDING"
+      },
+      {
+        "plan_id": "7190888f",
+        "name": "Plan C",
+        "description": "Isolate fault and perform active load shedding to stabilize grid frequency.",
+        "steps": [
+          {
+            "step_number": 1,
+            "action": "open_breaker",
+            "target_equipment_id": "B2A",
+            "description": "Trip breaker Breaker B2A to isolate line L2 fault.",
+            "safety_check_passed": true,
+            "executed": false,
+            "execution_timestamp": null,
+            "rollback_command": "close_breaker:B2A"
+          },
+          {
+            "step_number": 2,
+            "action": "open_breaker",
+            "target_equipment_id": "B2B",
+            "description": "Trip breaker Breaker B2B to isolate line L2 fault.",
+            "safety_check_passed": true,
+            "executed": false,
+            "execution_timestamp": null,
+            "rollback_command": "close_breaker:B2B"
+          },
+          {
+            "step_number": 3,
+            "action": "shed_noncritical_load",
+            "target_equipment_id": "L2",
+            "description": "Shed 25% of load on adjacent feeders to protect adjacent transformer units.",
+            "safety_check_passed": true,
+            "executed": false,
+            "execution_timestamp": null,
+            "rollback_command": "restore_customer_supply"
+          }
+        ],
+        "safety_score": 95.0,
+        "stability_impact_score": 90.0,
+        "speed_score": 92.0,
+        "customer_impact_score": 40.0,
+        "cost_score": 88.0,
+        "total_score": 81.0,
+        "status": "PENDING"
+      },
+      {
+        "plan_id": "4e6c37fd",
+        "name": "Plan D",
+        "description": "Isolate fault, reroute power, and request auxiliary battery storage injection.",
+        "steps": [
+          {
+            "step_number": 1,
+            "action": "open_breaker",
+            "target_equipment_id": "B2A",
+            "description": "Trip breaker Breaker B2A to isolate line L2 fault.",
+            "safety_check_passed": true,
+            "executed": false,
+            "execution_timestamp": null,
+            "rollback_command": "close_breaker:B2A"
+          },
+          {
+            "step_number": 2,
+            "action": "open_breaker",
+            "target_equipment_id": "B2B",
+            "description": "Trip breaker Breaker B2B to isolate line L2 fault.",
+            "safety_check_passed": true,
+            "executed": false,
+            "execution_timestamp": null,
+            "rollback_command": "close_breaker:B2B"
+          },
+          {
+            "step_number": 3,
+            "action": "request_battery_support",
+            "target_equipment_id": "Agent_3_Battery",
+            "description": "Request 15MW battery active power injection to cover rerouting load spikes.",
+            "safety_check_passed": true,
+            "executed": false,
+            "execution_timestamp": null,
+            "rollback_command": "release_battery_support"
+          }
+        ],
+        "safety_score": 95.0,
+        "stability_impact_score": 92.0,
+        "speed_score": 78.0,
+        "customer_impact_score": 95.0,
+        "cost_score": 70.0,
+        "total_score": 86.2,
+        "status": "PENDING"
+      },
+      {
+        "plan_id": "95b2c8ba",
+        "name": "Plan E",
+        "description": "Isolate, reroute, and adjust renewable generation profiles to mitigate overvoltage spikes.",
+        "steps": [
+          {
+            "step_number": 1,
+            "action": "open_breaker",
+            "target_equipment_id": "B2A",
+            "description": "Trip breaker Breaker B2A to isolate line L2 fault.",
+            "safety_check_passed": true,
+            "executed": false,
+            "execution_timestamp": null,
+            "rollback_command": "close_breaker:B2A"
+          },
+          {
+            "step_number": 2,
+            "action": "open_breaker",
+            "target_equipment_id": "B2B",
+            "description": "Trip breaker Breaker B2B to isolate line L2 fault.",
+            "safety_check_passed": true,
+            "executed": false,
+            "execution_timestamp": null,
+            "rollback_command": "close_breaker:B2B"
+          },
+          {
+            "step_number": 3,
+            "action": "request_renewable_support",
+            "target_equipment_id": "Agent_2_Renewables",
+            "description": "Command wind/solar generators in S3 zone to curtail generation by 10% to prevent overvoltage.",
+            "safety_check_passed": true,
+            "executed": false,
+            "execution_timestamp": null,
+            "rollback_command": "release_renewable_curtailment"
+          }
+        ],
+        "safety_score": 95.0,
+        "stability_impact_score": 90.0,
+        "speed_score": 75.0,
+        "customer_impact_score": 92.0,
+        "cost_score": 82.0,
+        "total_score": 86.6,
+        "status": "PENDING"
+      }
+    ],
+    "selected_plan_id": "95b2c8ba",
+    "current_state": "Planning",
+    "operator_override": false,
+    "operator_approved": false,
+    "status": "ACTIVE"
+  }
+]

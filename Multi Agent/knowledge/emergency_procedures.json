@@ -1,0 +1,21 @@
+[
+    {
+        "code": "EMERGENCY-BLACKSTART-STEPS",
+        "title": "Black Start Restoration Protocol",
+        "description": "Grid restoration procedures following a total grid failure. Starts hydro/battery systems first.",
+        "tags": ["emergency", "blackstart", "recovery"],
+        "parameters": {
+            "initial_energization_mw": 10.0,
+            "sync_window_phase_deg": 10
+        }
+    },
+    {
+        "code": "EMERGENCY-CYBER-ISOLATION",
+        "title": "Cyber Security Network Airgap isolation",
+        "description": "Enforces network separation and switches substations to local autonomous control during suspected hacking.",
+        "tags": ["emergency", "security", "isolation"],
+        "parameters": {
+            "action_window_seconds": 30
+        }
+    }
+]

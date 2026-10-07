@@ -1,0 +1,21 @@
+{
+  "safety_protocols": [
+    "Verify electrical isolation of the target unit.",
+    "Verify grounding lines are securely connected.",
+    "Confirm presence of required safety PPE (Arc Flash suit, insulated gloves).",
+    "Acquire active outage clearance certificate from the grid control station (Agent 4)."
+  ],
+  "required_tools": {
+    "Oil Filtration": ["Mobile dehydration trailer", "Oil chemical test kit", "Vacuum pumps"],
+    "Breaker Refurbish": ["Micro-ohmmeter", "SF6 recovery cart", "Precision socket sets"],
+    "Blade Repair": ["Blade inspection drone", "Climbing harness", "Ultrasonic sensor scanner"],
+    "Battery Overhaul": ["High voltage insulated toolset", "Thermal imaging camera", "Battery tester"]
+  },
+  "costs": {
+    "Oil Filtration": 4500.0,
+    "Breaker Refurbish": 7800.0,
+    "Blade Repair": 14000.0,
+    "Battery Overhaul": 18500.0,
+    "Line Sag Tensioning": 6200.0
+  }
+}

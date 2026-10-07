@@ -1,0 +1,39 @@
+{
+  "standards": [
+    {
+      "code": "IEEE 1547",
+      "title": "Interconnection and Interoperability of Distributed Energy Resources",
+      "rules": [
+        "DER must trip within 0.16 seconds if voltage falls below 0.50 per unit.",
+        "DER must ride through voltage excursions between 0.88 and 1.10 per unit based on class requirements."
+      ]
+    },
+    {
+      "code": "IEEE C57.104",
+      "title": "Guide for the Interpretation of Gases Generated in Oil-Immersed Transformers",
+      "gases": {
+        "hydrogen_H2_limit_ppm": 100,
+        "methane_CH4_limit_ppm": 120,
+        "acetylene_C2H2_limit_ppm": 1,
+        "ethylene_C2H4_limit_ppm": 50,
+        "carbon_monoxide_CO_limit_ppm": 350
+      },
+      "condition_rating": {
+        "Condition 1 (Normal)": "Total Dissolved Combustible Gas (TDCG) < 720 ppm",
+        "Condition 2 (Warning)": "TDCG between 721 and 1920 ppm. Increase sampling frequency.",
+        "Condition 3 (High Risk)": "TDCG between 1921 and 4630 ppm. Winding insulation damage expected.",
+        "Condition 4 (Critical)": "TDCG > 4630 ppm. Immediate isolation required."
+      }
+    },
+    {
+      "code": "IEEE 519",
+      "title": "Recommended Practices and Requirements for Harmonic Control in Electrical Power Systems",
+      "voltage_thd_limits": {
+        "bus_voltage_under_69kV": 5.0,
+        "bus_voltage_69kV_to_161kV": 2.5,
+        "bus_voltage_over_161kV": 1.5,
+        "unit": "percent"
+      }
+    }
+  ]
+}

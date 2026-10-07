@@ -1,0 +1,15 @@
+{
+  "guidelines": [
+    {
+      "id": "IEEE-1547-GRID-SUPPORT",
+      "name": "IEEE 1547 Active Grid Support",
+      "description": "BESS must dynamically adjust active and reactive power during grid frequency and voltage deviations to assist stability."
+    },
+    {
+      "id": "IEEE-1184-CAPACITY",
+      "name": "IEEE 1184 Capacity Sizing",
+      "degradation_limit": 80.0,
+      "description": "A BESS is considered at its End of Life (EOL) for capacity planning when capacity falls below 80% of its initial rated capacity."
+    }
+  ]
+}

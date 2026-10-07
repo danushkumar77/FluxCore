@@ -1,0 +1,23 @@
+[
+    {
+        "code": "BESS-SOF-LIMITS",
+        "title": "State of Function Performance Envelopes",
+        "description": "Adjusts charge/discharge bounds as the Battery State of Health degrades.",
+        "tags": ["battery", "health", "soc"],
+        "parameters": {
+            "min_soc_normal": 15.0,
+            "max_soc_normal": 90.0,
+            "max_soh_degraded_discharge_mw": 5.0
+        }
+    },
+    {
+        "code": "BESS-TEMP-LIMITS",
+        "title": "BESS Operational Temperature Thresholds",
+        "description": "Provides thermal throttling guidelines to prevent thermal runaway.",
+        "tags": ["battery", "safety", "thermal"],
+        "parameters": {
+            "warning_temp_c": 50.0,
+            "critical_cutoff_temp_c": 60.0
+        }
+    }
+]

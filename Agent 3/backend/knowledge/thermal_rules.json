@@ -1,0 +1,24 @@
+{
+  "rules": [
+    {
+      "id": "THERMAL-WARM-COOLING",
+      "name": "Cooling System Active Threshold",
+      "temp_threshold": 32.0,
+      "cooling_level": "LOW",
+      "description": "Activate low-level liquid cooling once cell temperature exceeds 32C."
+    },
+    {
+      "id": "THERMAL-HOT-THROTTLE",
+      "name": "Over-Temperature Rate Throttling",
+      "temp_threshold": 45.0,
+      "max_c_rate": 0.2,
+      "description": "Throttle charge/discharge to 0.2C if cells exceed 45C to allow self-cooling."
+    },
+    {
+      "id": "THERMAL-CRITICAL-SHUTDOWN",
+      "name": "Critical Over-Temp Threshold",
+      "temp_threshold": 55.0,
+      "description": "Execute system shutdown if cell temperature exceeds 55C to prevent thermal runaway."
+    }
+  ]
+}

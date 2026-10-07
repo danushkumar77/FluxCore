@@ -1,0 +1,47 @@
+{
+  "nominal_hz": 60.0,
+  "rules": [
+    {
+      "stage": "NORMAL",
+      "min_hz": 59.8,
+      "max_hz": 60.2,
+      "delay_seconds": 99999,
+      "action": "Maintain normal governor frequency response (droop control)."
+    },
+    {
+      "stage": "UFLS_STAGE_1",
+      "min_hz": 59.3,
+      "max_hz": 59.5,
+      "delay_seconds": 0.5,
+      "action": "Shed 10% of non-critical feeder loads automatically."
+    },
+    {
+      "stage": "UFLS_STAGE_2",
+      "min_hz": 58.9,
+      "max_hz": 59.2,
+      "delay_seconds": 0.2,
+      "action": "Shed an additional 15% of feeder loads and request battery support (Agent 3)."
+    },
+    {
+      "stage": "UFLS_STAGE_3",
+      "min_hz": 0.0,
+      "max_hz": 58.8,
+      "delay_seconds": 0.0,
+      "action": "Isolate generators to prevent turbine blade damage and secure island operations."
+    },
+    {
+      "stage": "OVERFREQUENCY_WARNING",
+      "min_hz": 60.5,
+      "max_hz": 61.5,
+      "delay_seconds": 2.0,
+      "action": "Instruct renewable generators (Agent 2) to curtail active power injection."
+    },
+    {
+      "stage": "OVERFREQUENCY_TRIP",
+      "min_hz": 61.5,
+      "max_hz": 99.0,
+      "delay_seconds": 0.0,
+      "action": "Trip generators immediately to protect rotating machinery."
+    }
+  ]
+}

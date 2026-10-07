@@ -1,0 +1,26 @@
+{
+  "guidelines": {
+    "transformer_temperature_rise": {
+      "standard": "NEMA TR 1",
+      "winding_rise_limit_celsius": 65.0,
+      "hotspot_rise_limit_celsius": 80.0
+    },
+    "audible_sound_levels": {
+      "standard": "NEMA TR 1",
+      "limits_decibels": [
+        {
+          "rating_mva": "0 to 3 MVA",
+          "db_limit": 60
+        },
+        {
+          "rating_mva": "3 to 10 MVA",
+          "db_limit": 68
+        },
+        {
+          "rating_mva": "10 to 100 MVA",
+          "db_limit": 75
+        }
+      ]
+    }
+  }
+}

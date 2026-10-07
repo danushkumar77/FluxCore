@@ -1,0 +1,178 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: fluxcore
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: fluxcore-config
+  namespace: fluxcore
+data:
+  FLUXCORE_ENV: "production"
+  DATABASE_URL: "postgresql+asyncpg://fluxcore_user:fluxcore_password@postgres-service:5432/fluxcore_db"
+  REDIS_URL: "redis://redis-service:6379/0"
+
+---
+# --- Redis Service & Deployment ---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis-deployment
+  namespace: fluxcore
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redis
+  template:
+    metadata:
+      labels:
+        app: redis
+    spec:
+      containers:
+      - name: redis
+        image: redis:7-alpine
+        ports:
+        - containerPort: 6379
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis-service
+  namespace: fluxcore
+spec:
+  ports:
+  - port: 6379
+  selector:
+    app: redis
+
+---
+# --- Postgres Service & Deployment ---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres-deployment
+  namespace: fluxcore
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postgres
+  template:
+    metadata:
+      labels:
+        app: postgres
+    spec:
+      containers:
+      - name: postgres
+        image: postgres:15-alpine
+        env:
+        - name: POSTGRES_USER
+          value: "fluxcore_user"
+        - name: POSTGRES_PASSWORD
+          value: "fluxcore_password"
+        - name: POSTGRES_DB
+          value: "fluxcore_db"
+        ports:
+        - containerPort: 5432
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres-service
+  namespace: fluxcore
+spec:
+  ports:
+  - port: 5432
+  selector:
+    app: postgres
+
+---
+# --- Backend (API Gateway & Agents) ---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+  namespace: fluxcore
+spec:
+  replicas: 3 # Horizontally scaled agent processing nodes
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: backend
+        image: fluxcore-backend:latest
+        imagePullPolicy: IfNotPresent
+        envFrom:
+        - configMapRef:
+            name: fluxcore-config
+        ports:
+        - containerPort: 8000
+        readinessProbe:
+          httpGet:
+            path: /api/v1/health
+            port: 8000
+          initialDelaySeconds: 15
+          periodSeconds: 10
+        livenessProbe:
+          httpGet:
+            path: /api/v1/health
+            port: 8000
+          initialDelaySeconds: 20
+          periodSeconds: 15
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-service
+  namespace: fluxcore
+spec:
+  ports:
+  - port: 8000
+    targetPort: 8000
+  selector:
+    app: backend
+
+---
+# --- Frontend (Digital Twin Dashboard) ---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deployment
+  namespace: fluxcore
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - name: frontend
+        image: fluxcore-frontend:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-service
+  namespace: fluxcore
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 80
+  selector:
+    app: frontend

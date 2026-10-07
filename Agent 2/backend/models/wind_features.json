@@ -1,0 +1,1 @@
+["wind_speed", "wind_direction", "air_density", "wind_power_density", "wind_speed_lag_1h", "wind_speed_lag_2h", "wind_speed_lag_24h", "wind_speed_roll_mean_3h", "wind_speed_roll_std_3h", "wind_speed_roll_mean_6h", "wind_speed_roll_mean_24h", "temperature", "atmospheric_pressure"]

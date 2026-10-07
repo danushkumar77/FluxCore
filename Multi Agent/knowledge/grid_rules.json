@@ -1,0 +1,23 @@
+[
+    {
+        "code": "GRID-LIMIT-VOLTAGE-STABILITY",
+        "title": "Grid Voltage Stability Limits",
+        "description": "Restricts operational voltage variance to prevent grid collapse or brownouts.",
+        "tags": ["grid", "stability", "voltage"],
+        "parameters": {
+            "nominal_voltage_kv": 115.0,
+            "min_allowed_kv": 109.25,
+            "max_allowed_kv": 120.75
+        }
+    },
+    {
+        "code": "GRID-LIMIT-THERMAL-CAPACITY",
+        "title": "Transmission Line Thermal Capacity",
+        "description": "Restricts line loading current flows to prevent line sag or equipment damage.",
+        "tags": ["grid", "thermal", "line"],
+        "parameters": {
+            "max_line_loading_pct": 95.0,
+            "critical_overload_duration_min": 10.0
+        }
+    }
+]

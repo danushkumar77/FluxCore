@@ -1,0 +1,67 @@
+{
+  "fault_detection": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "feature_importances": {
+      "voltage": 0.2610334326874675,
+      "current": 0.3703111576682999,
+      "frequency": 0.0011639490743603847,
+      "harmonics": 0.3659940618390603,
+      "load": 0.0014973987308120607
+    }
+  },
+  "fault_classification": {
+    "accuracy": 0.25666666666666665,
+    "precision": 0.2513020833333333,
+    "recall": 0.25391655361641796,
+    "f1_score": 0.2512995576357189,
+    "feature_importances": {
+      "voltage": 0.3404104709625244,
+      "current": 0.31515979766845703,
+      "harmonics": 0.34442973136901855
+    }
+  },
+  "fault_localization": {
+    "rmse": 14.003592397305205,
+    "mae": 11.94039818800404,
+    "feature_importances": {
+      "voltage": 0.5041741840608696,
+      "current": 0.4958258159391305
+    }
+  },
+  "outage_prediction": {
+    "rmse": 693.9323284822776,
+    "mae": 586.7528768601687,
+    "feature_importances": {
+      "voltage": 0.20720261335372925,
+      "current": 0.2586307227611542,
+      "harmonics": 0.23934680223464966,
+      "load": 0.2948198914527893
+    }
+  },
+  "equipment_failure": {
+    "accuracy": 0.8966666666666666,
+    "precision": 0.5130494505494506,
+    "recall": 0.49388111888111885,
+    "f1_score": 0.4889705882352941,
+    "feature_importances": {
+      "winding_temp": 0.21219788566497882,
+      "oil_temp": 0.19218172817364157,
+      "vibration": 0.17287291487667628,
+      "partial_discharge": 0.21415170249235016,
+      "insulation": 0.2085957687923531
+    }
+  },
+  "grid_stability": {
+    "rmse": 0.6348395262243507,
+    "mae": 0.2956035044198314,
+    "feature_importances": {
+      "voltage": 0.3214528453133546,
+      "current": 0.23692715582069687,
+      "harmonics": 0.4413088441868319,
+      "load": 0.00031115467911663284
+    }
+  }
+}

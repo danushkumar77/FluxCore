@@ -1,0 +1,21 @@
+[
+    {
+        "code": "MARKET-RULE-ARBITRAGE",
+        "title": "Energy Arbitrage Purchase Rules",
+        "description": "Restricts purchasing energy for battery storage unless price is below rolling median price.",
+        "tags": ["market", "arbitrage", "battery"],
+        "parameters": {
+            "min_spread_usd_mwh": 15.0,
+            "max_buy_price_usd_mwh": 80.0
+        }
+    },
+    {
+        "code": "MARKET-RULE-FEEDIN",
+        "title": "Renewable Feed-in Tariff Protection",
+        "description": "Rules for prioritizing renewable delivery over stored energy when feed-in margins are peak.",
+        "tags": ["market", "renewable"],
+        "parameters": {
+            "feedin_priority": 1
+        }
+    }
+]

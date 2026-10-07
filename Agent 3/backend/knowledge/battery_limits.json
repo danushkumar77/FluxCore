@@ -1,0 +1,36 @@
+{
+  "limits": [
+    {
+      "id": "LIMIT-VOLT-MAX",
+      "name": "Maximum Cell Voltage",
+      "value": 4.25,
+      "unit": "V",
+      "criticality": "HIGH",
+      "description": "Exceeding this cell voltage risks lithium plating and thermal runaway."
+    },
+    {
+      "id": "LIMIT-VOLT-MIN",
+      "name": "Minimum Cell Voltage",
+      "value": 2.75,
+      "unit": "V",
+      "criticality": "HIGH",
+      "description": "Dropping below this voltage triggers copper dissolution and internal short-circuits."
+    },
+    {
+      "id": "LIMIT-SOC-MAX",
+      "name": "Maximum State of Charge",
+      "value": 100.0,
+      "unit": "%",
+      "criticality": "MEDIUM",
+      "description": "High SoC accelerates capacity degradation due to elevated anodic potential."
+    },
+    {
+      "id": "LIMIT-SOC-MIN",
+      "name": "Minimum State of Charge",
+      "value": 5.0,
+      "unit": "%",
+      "criticality": "MEDIUM",
+      "description": "Low SoC values limit active reserve capacity and increase depth-of-discharge stress."
+    }
+  ]
+}

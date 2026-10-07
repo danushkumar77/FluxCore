@@ -1,0 +1,46 @@
+{
+  "limits": {
+    "winding_temperature": {
+      "warning": 95.0,
+      "critical": 110.0,
+      "unit": "Celsius",
+      "action_warning": "Activate secondary cooling fans and check oil pump status.",
+      "action_critical": "Initiate emergency automatic load transfer or trip transformer protection relay to prevent thermal breakdown."
+    },
+    "top_oil_temperature": {
+      "warning": 85.0,
+      "critical": 98.0,
+      "unit": "Celsius",
+      "action_warning": "Inspect cooling fan groups.",
+      "action_critical": "Reduce load by 15% immediately."
+    },
+    "load_percentage": {
+      "warning": 100.0,
+      "critical": 120.0,
+      "unit": "percent",
+      "action_warning": "Monitor winding temperature rise.",
+      "action_critical": "Shed or reroute loads within 15 minutes to avoid core degradation."
+    },
+    "partial_discharge": {
+      "warning": 100.0,
+      "critical": 500.0,
+      "unit": "pico_coulombs_pC",
+      "action_warning": "Schedule oil dissolved gas analysis (DGA).",
+      "action_critical": "Trigger online DGA monitor check and alert field technicians for winding insulation inspection."
+    },
+    "vibration": {
+      "warning": 50.0,
+      "critical": 120.0,
+      "unit": "micrometer_displacement",
+      "action_warning": "Inspect mechanical frame bolts and core clamp tension.",
+      "action_critical": "Shut down transformer for mechanical integrity audit."
+    },
+    "insulation_resistance": {
+      "warning": 500.0,
+      "critical": 100.0,
+      "unit": "Megaohms",
+      "action_warning": "Conduct oil moisture filtering.",
+      "action_critical": "Isolate unit to prevent catastrophic winding flashover."
+    }
+  }
+}

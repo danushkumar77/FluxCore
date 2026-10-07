@@ -1,0 +1,23 @@
+# Node
+node_modules/
+dist/
+*.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+ENV/
+env/
+
+# Databases
+*.db
+*.sqlite
+
+# Environment variables
+.env
+.env.*
+.vscode/

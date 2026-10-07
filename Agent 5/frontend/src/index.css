@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg-color: #081018;
+  --panel-bg: rgba(13, 24, 38, 0.7);
+  --panel-border: rgba(0, 150, 255, 0.15);
+  --color-healthy: #34C759;
+  --color-warning: #FF9500;
+  --color-critical: #FF3B30;
+  --color-ai: #7C4DFF;
+  --color-blue: #0096FF;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-dark: #0f172a;
+  --accent-glow: rgba(0, 150, 255, 0.35);
+  --font-sans: 'Outfit', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--panel-border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-blue);
+}
+
+/* Glass panel wrappers */
+.glass-panel {
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: 12px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  transition: var(--transition-smooth);
+}
+.glass-panel:hover {
+  border-color: rgba(0, 150, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(0, 150, 255, 0.05);
+}
+
+/* Glowing alerts */
+.alert-glow-healthy {
+  text-shadow: 0 0 10px rgba(52, 199, 89, 0.5);
+  color: var(--color-healthy);
+}
+.alert-glow-warning {
+  text-shadow: 0 0 10px rgba(255, 149, 0, 0.5);
+  color: var(--color-warning);
+}
+.alert-glow-critical {
+  text-shadow: 0 0 10px rgba(255, 59, 48, 0.5);
+  color: var(--color-critical);
+}
+
+/* High-tech dashboards grids */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Terminal logs styling */
+.terminal-output {
+  font-family: var(--font-mono);
+  background: rgba(4, 8, 15, 0.85);
+  border: 1px solid rgba(0, 150, 255, 0.2);
+  border-radius: 6px;
+  padding: 15px;
+  color: #38bdf8;
+  height: 250px;
+  overflow-y: auto;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+/* Tabs navigation */
+.tab-button {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  padding: 10px 16px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: var(--transition-smooth);
+}
+.tab-button.active {
+  color: var(--color-blue);
+  border-bottom-color: var(--color-blue);
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(0, 150, 255, 0.3);
+}
+
+/* Custom button states */
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-blue), #0072ff);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 150, 255, 0.3);
+  transition: var(--transition-smooth);
+}
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(0, 150, 255, 0.5);
+}
+
+.btn-ai {
+  background: linear-gradient(135deg, var(--color-ai), #512da8);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(124, 77, 255, 0.3);
+  transition: var(--transition-smooth);
+}
+.btn-ai:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(124, 77, 255, 0.5);
+}
+
+/* Status dots */
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+}
+.status-dot.healthy { background-color: var(--color-healthy); box-shadow: 0 0 8px var(--color-healthy); }
+.status-dot.warning { background-color: var(--color-warning); box-shadow: 0 0 8px var(--color-warning); }
+.status-dot.critical { background-color: var(--color-critical); box-shadow: 0 0 8px var(--color-critical); }

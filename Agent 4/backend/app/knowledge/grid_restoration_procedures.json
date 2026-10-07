@@ -1,0 +1,31 @@
+{
+  "procedures": {
+    "black_start": {
+      "steps": [
+        "Isolate all faulted transmission lines and substations.",
+        "Startup local black-start-capable combustion turbine generator.",
+        "Energize auxiliary substation transformer and local buses.",
+        "Gradually re-energize clean transmission lines, verifying voltage profiles.",
+        "Perform cold load pickup in small increments (max 10% of generator capacity) to avoid transient frequency dip."
+      ]
+    },
+    "fault_isolation_and_restoration": {
+      "steps": [
+        "Detect fault zone and verify breaker trip telemetry.",
+        "Send open commands to isolates switches on line terminals.",
+        "Verify 3-phase isolation using SCADA telemetry.",
+        "Formulate path rerouting options (Plans A-E).",
+        "Perform safety validation checks (voltage/thermal overload constraints).",
+        "Close tie-breakers to restore power to un-faulted segments.",
+        "Notify operator and trigger field maintenance ticket."
+      ]
+    },
+    "synchronization": {
+      "rules": [
+        "Voltage difference: < 5%",
+        "Frequency difference: < 0.1 Hz",
+        "Phase angle difference: < 10 degrees"
+      ]
+    }
+  }
+}

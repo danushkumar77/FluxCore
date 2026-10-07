@@ -1,0 +1,17 @@
+{
+  "rules": [
+    {
+      "id": "DEG-DOD-MAX",
+      "name": "Depth of Discharge Target",
+      "recommended_max_dod": 80.0,
+      "description": "Limiting Depth of Discharge to 80% (i.e. maintaining SoC between 10% and 90%) doubles cell lifecycle compared to 100% DoD cycling."
+    },
+    {
+      "id": "DEG-TEMP-ACCEL",
+      "name": "Thermal Degradation Acceleration",
+      "threshold_temp": 40.0,
+      "degradation_multiplier": 1.5,
+      "description": "Operating above 40C speeds up SEI layer growth, increasing SOH decay rate by 1.5x."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "safety_margins": {
+    "voltage_dev_limit_pct": 5.0,
+    "frequency_dev_limit_hz": 0.2
+  },
+  "operational_modes": {
+    "emergency_reserve_hours": 2.0,
+    "black_start_capability": true
+  },
+  "load_shedding": {
+    "load_shed_threshold_kw": 2200.0,
+    "non_critical_shed_multiplier": 0.3
+  },
+  "equipment_limits": {
+    "transformer_max_temp_c": 95.0,
+    "battery_max_temp_c": 48.0
+  }
+}

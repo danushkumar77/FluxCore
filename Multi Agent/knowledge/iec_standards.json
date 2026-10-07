@@ -1,0 +1,22 @@
+[
+    {
+        "code": "IEC-60038",
+        "title": "IEC Standard Voltages",
+        "description": "Specifies nominal voltage values for public AC power systems. Defines normal grid operation deviation within +/- 10%.",
+        "tags": ["voltage", "grid"],
+        "parameters": {
+            "nominal_deviation_pct": 10.0,
+            "emergency_deviation_pct": 15.0
+        }
+    },
+    {
+        "code": "IEC-62619",
+        "title": "Safety Requirements for Large Industrial Batteries",
+        "description": "Standard governing safety of secondary lithium batteries for use in industrial applications including electrical grids.",
+        "tags": ["battery", "safety"],
+        "parameters": {
+            "max_cell_temp_c": 65.0,
+            "min_insulation_mohm": 100
+        }
+    }
+]

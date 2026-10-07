@@ -1,0 +1,29 @@
+# Virtual Environment
+venv/
+.venv/
+ENV/
+env/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Databases & local state
+*.db
+*.db-journal
+*.log
+
+# Frontend Dependencies
+frontend/node_modules/
+frontend/dist/
+frontend/.svelte-kit/
+frontend/.next/
+frontend/build/
+
+# IDE files & OS metadata
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+.env

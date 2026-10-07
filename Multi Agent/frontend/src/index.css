@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#05070B] text-slate-100 overflow-x-hidden antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+/* Animated Gradient Mesh (Aurora background) */
+.aurora-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+  background-color: #05070B;
+  background-image: 
+    radial-gradient(at 10% 20%, rgba(139, 92, 246, 0.05) 0px, transparent 50%),
+    radial-gradient(at 90% 10%, rgba(6, 182, 212, 0.05) 0px, transparent 50%),
+    radial-gradient(at 50% 80%, rgba(16, 185, 129, 0.04) 0px, transparent 50%);
+  filter: blur(80px);
+  opacity: 0.8;
+  animation: aurora-shift 25s infinite alternate ease-in-out;
+}
+
+@keyframes aurora-shift {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+/* Glassmorphism Design Tokens */
+.glass-panel {
+  background: rgba(14, 21, 37, 0.45);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.03), 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel:hover {
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.06), 0 12px 40px 0 rgba(0, 0, 0, 0.6);
+}
+
+/* Neon Glow classes */
+.neon-border-cyan {
+  border-color: rgba(0, 229, 255, 0.25) !important;
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.05) !important;
+}
+
+.neon-border-emerald {
+  border-color: rgba(0, 255, 153, 0.25) !important;
+  box-shadow: 0 0 15px rgba(0, 255, 153, 0.05) !important;
+}
+
+.neon-border-purple {
+  border-color: rgba(139, 92, 246, 0.25) !important;
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.05) !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(5, 7, 11, 0.3);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 229, 255, 0.35);
+}
+
+/* Glowing Pulsing Animations */
+@keyframes neon-pulse {
+  0%, 100% {
+    opacity: 0.5;
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.2);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
+  }
+}
+
+.pulse-glow-cyan {
+  animation: neon-pulse 3s infinite ease-in-out;
+}
+
+@keyframes flow-dash {
+  to {
+    stroke-dashoffset: -40;
+  }
+}
+
+.animate-flow-line {
+  stroke-dasharray: 5, 5;
+  animation: flow-dash 2s linear infinite;
+}

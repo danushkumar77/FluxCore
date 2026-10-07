@@ -1,0 +1,64 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: fluxcore_postgres
+    environment:
+      POSTGRES_USER: fluxcore_user
+      POSTGRES_PASSWORD: fluxcore_password
+      POSTGRES_DB: fluxcore_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U fluxcore_user -d fluxcore_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: fluxcore_redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redisdata:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: fluxcore_backend
+    environment:
+      - FLUXCORE_ENV=production
+      - DATABASE_URL=postgresql+asyncpg://fluxcore_user:fluxcore_password@postgres/fluxcore_db
+      - REDIS_URL=redis://redis:6379/0
+      - JWT_SECRET_KEY=enterprise_grade_fluxcore_production_secret_key_987654321
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: fluxcore_frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+
+volumes:
+  pgdata:
+  redisdata:

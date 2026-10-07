@@ -1,0 +1,32 @@
+{
+  "TransmissionLine": {
+    "conductor_temp": {
+      "warning": 75.0,
+      "critical": 90.0,
+      "unit": "°C",
+      "description": "IEEE standard line rating thermal limits."
+    }
+  },
+  "Battery": {
+    "cell_temp": {
+      "warning": 45.0,
+      "critical": 55.0,
+      "unit": "°C",
+      "description": "Lithium-ion thermal runway limits."
+    }
+  },
+  "Renewable": {
+    "gearbox_oil_temp": {
+      "warning": 78.0,
+      "critical": 88.0,
+      "unit": "°C",
+      "description": "Wind turbine gear lubrication limits."
+    },
+    "panel_temp": {
+      "warning": 65.0,
+      "critical": 75.0,
+      "unit": "°C",
+      "description": "Solar panel overheating coefficients."
+    }
+  }
+}

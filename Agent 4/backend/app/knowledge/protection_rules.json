@@ -1,0 +1,48 @@
+{
+  "rules": [
+    {
+      "id": "IEEE-50-INST-OVERCURRENT",
+      "name": "Instantaneous Overcurrent Protection",
+      "standard": "IEEE C37.91",
+      "monitored_parameter": "Phase Current (RMS)",
+      "limit_value": 4.0,
+      "unit": "per_unit",
+      "trip_delay_ms": 16,
+      "severity": "CRITICAL",
+      "description": "Protects against short-circuit currents by tripping instantaneously (typically <1 cycle) when current exceeds the pickup threshold."
+    },
+    {
+      "id": "IEEE-51-TIME-OVERCURRENT",
+      "name": "Time-Delay Overcurrent Protection",
+      "standard": "IEEE C37.91",
+      "monitored_parameter": "Phase Current (RMS)",
+      "limit_value": 1.5,
+      "unit": "per_unit",
+      "trip_delay_ms": 1500,
+      "severity": "WARNING",
+      "description": "Protects against sustained thermal overloads. Uses inverse-time curve characteristics to trip if current exceeds pickup value for a defined duration."
+    },
+    {
+      "id": "IEEE-87T-DIFF-TRANSFORMER",
+      "name": "Transformer Differential Protection",
+      "standard": "IEEE C37.91",
+      "monitored_parameter": "Differential Current (I_diff)",
+      "limit_value": 0.35,
+      "unit": "per_unit",
+      "trip_delay_ms": 20,
+      "severity": "CRITICAL",
+      "description": "Compares primary and secondary currents. Any mismatch indicates an internal transformer winding fault and triggers an instantaneous lockout."
+    },
+    {
+      "id": "IEEE-21-DISTANCE",
+      "name": "Distance/Impedance Protection",
+      "standard": "IEEE C37.113",
+      "monitored_parameter": "Line Impedance (Z)",
+      "limit_value": 0.85,
+      "unit": "nominal_impedance_ratio",
+      "trip_delay_ms": 50,
+      "severity": "CRITICAL",
+      "description": "Measures ratio of voltage to current on transmission lines. Zone 1 trips instantaneously for faults within 80-85% of line length."
+    }
+  ]
+}

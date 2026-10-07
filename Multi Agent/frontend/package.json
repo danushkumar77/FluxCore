@@ -1,0 +1,39 @@
+{
+  "name": "frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "oxlint",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@react-three/drei": "latest",
+    "@react-three/fiber": "latest",
+    "@xyflow/react": "latest",
+    "clsx": "latest",
+    "framer-motion": "latest",
+    "lucide-react": "latest",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-is": "^19.2.8",
+    "recharts": "latest",
+    "tailwind-merge": "latest",
+    "three": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@types/three": "*",
+    "@vitejs/plugin-react": "^6.0.3",
+    "autoprefixer": "latest",
+    "oxlint": "latest",
+    "postcss": "latest",
+    "tailwindcss": "^3.4.4",
+    "typescript": "~6.0.2",
+    "vite": "^8.1.1"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "rules": [
+    {
+      "condition": "NORMAL",
+      "min_pu": 0.95,
+      "max_pu": 1.05,
+      "action": "Maintain normal automatic voltage regulation (AVR) and tap changer operation."
+    },
+    {
+      "condition": "UNDERVOLTAGE_WARNING",
+      "min_pu": 0.90,
+      "max_pu": 0.95,
+      "action": "Inhibit tap changes that aggravate transmission lines, activate capacitor banks, and adjust generator reactive power setpoints."
+    },
+    {
+      "condition": "UNDERVOLTAGE_CRITICAL",
+      "min_pu": 0.0,
+      "max_pu": 0.90,
+      "action": "Initiate emergency Under-Voltage Load Shedding (UVLS) to prevent voltage collapse."
+    },
+    {
+      "condition": "OVERVOLTAGE_WARNING",
+      "min_pu": 1.05,
+      "max_pu": 1.10,
+      "action": "Switch off capacitor banks, adjust shunt reactors, and decrease generator excitation levels."
+    },
+    {
+      "condition": "OVERVOLTAGE_CRITICAL",
+      "min_pu": 1.10,
+      "max_pu": 9.90,
+      "action": "Trip affected transmission lines or substations to prevent insulation failure and equipment damage."
+    }
+  ]
+}

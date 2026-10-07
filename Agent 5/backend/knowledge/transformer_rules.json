@@ -1,0 +1,98 @@
+{
+  "asset_type": "Transformer",
+  "limits": {
+    "oil_temp": {
+      "warning": 80.0,
+      "critical": 90.0,
+      "unit": "°C",
+      "description": "Top oil temperature limits based on IEEE guidelines."
+    },
+    "winding_temp": {
+      "warning": 95.0,
+      "critical": 110.0,
+      "unit": "°C",
+      "description": "Winding hot-spot temperature limits."
+    },
+    "h2_gas": {
+      "warning": 100.0,
+      "critical": 500.0,
+      "unit": "ppm",
+      "description": "Hydrogen gas indicating partial discharge or corona."
+    },
+    "c2h2_gas": {
+      "warning": 2.0,
+      "critical": 15.0,
+      "unit": "ppm",
+      "description": "Acetylene gas indicating high-energy arcing (Critical indicator)."
+    },
+    "ch4_gas": {
+      "warning": 120.0,
+      "critical": 400.0,
+      "unit": "ppm",
+      "description": "Methane gas indicating low-temperature thermal hotspot."
+    },
+    "c2h4_gas": {
+      "warning": 50.0,
+      "critical": 200.0,
+      "unit": "ppm",
+      "description": "Ethylene gas indicating high-temperature thermal hotspot."
+    },
+    "breakdown_voltage": {
+      "warning": 50.0,
+      "critical": 40.0,
+      "comparator": "less_than",
+      "unit": "kV",
+      "description": "Dielectric strength of transformer oil."
+    },
+    "pd_level": {
+      "warning": 100.0,
+      "critical": 500.0,
+      "unit": "pC",
+      "description": "Partial discharge energy measurement."
+    },
+    "vibration": {
+      "warning": 2.5,
+      "critical": 4.5,
+      "unit": "mm/s",
+      "description": "Mechanical vibration of tank walls."
+    },
+    "moisture": {
+      "warning": 20.0,
+      "critical": 35.0,
+      "unit": "ppm",
+      "description": "Moisture content in paper insulation / oil."
+    }
+  },
+  "rules": [
+    {
+      "id": "TRANSFORMER-TEMP-01",
+      "condition": "oil_temp > warning",
+      "action": "Schedule oil inspection and check cooling system fans",
+      "severity": "Warning"
+    },
+    {
+      "id": "TRANSFORMER-TEMP-02",
+      "condition": "oil_temp > critical",
+      "action": "Trigger cooling override and notify grid dispatch to reduce load",
+      "severity": "Critical"
+    },
+    {
+      "id": "TRANSFORMER-DGA-01",
+      "condition": "c2h2_gas > warning",
+      "action": "Initiate immediate DGA oil sampling test within 48 hours",
+      "severity": "Warning"
+    },
+    {
+      "id": "TRANSFORMER-DGA-02",
+      "condition": "c2h2_gas > critical",
+      "action": "Trigger emergency inspection: High risk of internal power arcing",
+      "severity": "Critical"
+    },
+    {
+      "id": "TRANSFORMER-INSULATION-01",
+      "condition": "breakdown_voltage < warning or moisture > warning",
+      "action": "Schedule oil filtering and dehydration process",
+      "severity": "Warning"
+    }
+  ]
+}

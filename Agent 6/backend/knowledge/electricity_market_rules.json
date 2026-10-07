@@ -1,0 +1,17 @@
+{
+  "market_name": "FluxCore Virtual Power Market",
+  "currency": "USD",
+  "market_structure": "Dual-participation (Grid Import/Export)",
+  "bidding_interval_minutes": 5,
+  "day_ahead_market_clearing_hour": 14,
+  "price_caps": {
+    "max_buy_price_per_kwh": 2.50,
+    "min_buy_price_per_kwh": 0.01,
+    "max_sell_price_per_kwh": 1.80,
+    "min_sell_price_per_kwh": 0.00
+  },
+  "compliance_requirements": {
+    "grid_code_standard": "IEEE-1547",
+    "reactive_power_limits": [-0.9, 0.9]
+  }
+}

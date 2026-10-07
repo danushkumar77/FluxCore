@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Outfit:wght@300;400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Outfit', sans-serif;
+  --font-mono: 'Share Tech Mono', monospace;
+  --color-background: #050816;
+  --color-panel: #0e1628;
+  --color-cyan-neon: #00f0ff;
+  --color-blue-neon: #3b82f6;
+  --color-emerald-neon: #10b981;
+  --color-amber-neon: #f59e0b;
+  --color-red-neon: #ef4444;
+}
+
+:root {
+  --background: #050816;
+  --panel: rgba(14, 22, 40, 0.7);
+  --border: rgba(0, 240, 255, 0.12);
+  --border-hover: rgba(0, 240, 255, 0.35);
+  --glow-cyan: rgba(0, 240, 255, 0.08);
+}
+
+body {
+  background-color: #050816;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.08) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(0, 240, 255, 0.08) 0px, transparent 50%),
+    radial-gradient(at 50% 100%, rgba(139, 92, 246, 0.08) 0px, transparent 50%),
+    linear-gradient(rgba(18, 24, 48, 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(18, 24, 48, 0.3) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+  color: #e2e8f0;
+  font-family: 'Outfit', sans-serif;
+  overflow-x: hidden;
+  letter-spacing: 0.01em;
+}
+
+/* Sci-fi Terminal Text */
+.font-terminal {
+  font-family: 'Share Tech Mono', monospace;
+}
+
+/* Glass Panels with neon borders */
+.hud-panel {
+  background: rgba(14, 22, 40, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  box-shadow: inset 0 0 15px rgba(0, 240, 255, 0.02);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.hud-panel:hover {
+  border-color: var(--border-hover);
+  box-shadow: 
+    inset 0 0 20px rgba(0, 240, 255, 0.05),
+    0 0 15px rgba(0, 240, 255, 0.05);
+}
+
+/* Scanline animation */
+.hud-panel::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 240, 255, 0.15) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 10;
+  background-size: 100% 4px, 6px 100%;
+  pointer-events: none;
+  opacity: 0.04;
+}
+
+/* Scanline sweep laser */
+.hud-panel::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(0, 240, 255, 0.3), transparent);
+  animation: scan-sweep 6s linear infinite;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 5;
+}
+
+@keyframes scan-sweep {
+  0% { top: -10px; }
+  100% { top: 110%; }
+}
+
+/* Hologram glow text */
+.glow-cyan {
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.6);
+}
+.glow-emerald {
+  text-shadow: 0 0 10px rgba(16, 185, 129, 0.6);
+}
+.glow-amber {
+  text-shadow: 0 0 10px rgba(245, 158, 11, 0.6);
+}
+.glow-red {
+  text-shadow: 0 0 10px rgba(239, 68, 68, 0.6);
+}
+.glow-purple {
+  text-shadow: 0 0 10px rgba(192, 132, 252, 0.6);
+}
+
+/* Electron flow dash animation */
+.electron-flow {
+  stroke-dasharray: 8, 12;
+  animation: flow 18s linear infinite;
+}
+
+@keyframes flow {
+  to {
+    stroke-dashoffset: -1000;
+  }
+}
+
+/* Pulsing grid node */
+.grid-node-pulse {
+  animation: pulse-node 2.5s infinite alternate;
+}
+
+@keyframes pulse-node {
+  0% {
+    r: 6px;
+    fill-opacity: 0.7;
+    filter: drop-shadow(0 0 2px var(--color-cyan-neon));
+  }
+  100% {
+    r: 9px;
+    fill-opacity: 1;
+    filter: drop-shadow(0 0 8px var(--color-cyan-neon));
+  }
+}
+
+/* Telemetry scroll ticker */
+.ticker-wrap {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.ticker-content {
+  display: inline-block;
+  animation: ticker 40s linear infinite;
+}
+@keyframes ticker {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+/* Hide defaults scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(14, 22, 40, 0.2);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 240, 255, 0.2);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 240, 255, 0.4);
+}

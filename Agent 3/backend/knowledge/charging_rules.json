@@ -1,0 +1,24 @@
+{
+  "rules": [
+    {
+      "id": "CHARGE-RATE-MAX",
+      "name": "Maximum Charge Rate",
+      "max_c_rate": 1.0,
+      "description": "Standard maximum charge rate under nominal conditions is 1.0C."
+    },
+    {
+      "id": "CHARGE-TEMP-LIMIT",
+      "name": "Cold Charging Restraint",
+      "min_temp": 0.0,
+      "max_c_rate": 0.1,
+      "description": "Charging below 0C must be throttled to 0.1C to prevent dendrite formation."
+    },
+    {
+      "id": "CHARGE-SOC-TAPER",
+      "name": "SoC Tapering Regulation",
+      "soc_threshold": 80.0,
+      "max_c_rate": 0.25,
+      "description": "Reduce charging rate to 0.25C above 80% SoC to avoid overpotential."
+    }
+  ]
+}

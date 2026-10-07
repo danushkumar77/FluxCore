@@ -1,0 +1,18 @@
+{
+  "Renewable": {
+    "turbine_vibration": {
+      "warning": 0.28,
+      "critical": 0.48,
+      "unit": "g",
+      "description": "Wind turbine nacelle/rotor casing vibration tolerances."
+    }
+  },
+  "Transformer": {
+    "vibration": {
+      "warning": 2.5,
+      "critical": 4.5,
+      "unit": "mm/s",
+      "description": "Transformer mechanical vibration of core and windings."
+    }
+  }
+}

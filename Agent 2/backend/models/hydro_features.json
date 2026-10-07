@@ -1,0 +1,1 @@
+["reservoir_level", "reservoir_utilization", "hydro_flow_index", "rainfall", "grid_demand", "reservoir_level_lag_1h", "reservoir_level_lag_24h", "season", "month_sin", "month_cos"]

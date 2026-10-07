@@ -1,0 +1,84 @@
+{
+  "solar": {
+    "mae": 15.23660268058856,
+    "rmse": 28.01412020435673,
+    "mape": 1.4542311113726523,
+    "r2": 0.9998966739920566,
+    "best_params": {
+      "colsample_bytree": 0.8,
+      "learning_rate": 0.1,
+      "max_depth": 5,
+      "n_estimators": 100,
+      "subsample": 0.8
+    },
+    "feature_importance": {
+      "solar_irradiance": 0.8846198320388794,
+      "solar_zenith_angle": 0.06708990037441254,
+      "hour_cos": 0.019475281238555908,
+      "solar_efficiency_index": 0.01560177095234394,
+      "solar_irradiance_lag_24h": 0.00787604134529829,
+      "cloud_attenuation_factor": 0.0034624941181391478,
+      "hour_sin": 0.0006722326506860554,
+      "cloud_cover": 0.0005337377078831196,
+      "temperature": 0.0002548896591179073,
+      "day_sin": 0.00014499301323667169,
+      "solar_irradiance_lag_1h": 0.00013917831529397517,
+      "day_cos": 5.929165126872249e-05,
+      "cloud_cover_roll_mean_3h": 4.254715531715192e-05,
+      "cloud_cover_roll_std_3h": 2.7714340831153095e-05
+    }
+  },
+  "wind": {
+    "mae": 87.79344384258333,
+    "rmse": 134.13277350688978,
+    "mape": 96.47074274817616,
+    "r2": 0.9795424861770824,
+    "best_params": {
+      "colsample_bytree": 0.8,
+      "learning_rate": 0.1,
+      "max_depth": 3,
+      "n_estimators": 100,
+      "subsample": 0.8
+    },
+    "feature_importance": {
+      "wind_speed": 0.8579813838005066,
+      "wind_power_density": 0.12329516559839249,
+      "wind_speed_roll_mean_6h": 0.011628476902842522,
+      "wind_speed_roll_std_3h": 0.0029631145298480988,
+      "temperature": 0.0009255331242457032,
+      "wind_speed_lag_2h": 0.0008901890250854194,
+      "air_density": 0.0003656951303128153,
+      "wind_direction": 0.0003524786443449557,
+      "wind_speed_roll_mean_3h": 0.0003468165232334286,
+      "wind_speed_roll_mean_24h": 0.00034248226438649,
+      "wind_speed_lag_24h": 0.00031435186974704266,
+      "atmospheric_pressure": 0.0003113294951617718,
+      "wind_speed_lag_1h": 0.0002828324504662305
+    }
+  },
+  "hydro": {
+    "mae": 79.35226269412803,
+    "rmse": 99.31805454648863,
+    "mape": 47.014232389313,
+    "r2": 0.5885312429805678,
+    "best_params": {
+      "colsample_bytree": 0.8,
+      "learning_rate": 0.1,
+      "max_depth": 3,
+      "n_estimators": 100,
+      "subsample": 0.8
+    },
+    "feature_importance": {
+      "reservoir_level_lag_1h": 0.3530077636241913,
+      "reservoir_level": 0.3289947509765625,
+      "grid_demand": 0.1208939328789711,
+      "reservoir_utilization": 0.11140395700931549,
+      "reservoir_level_lag_24h": 0.08084149658679962,
+      "hydro_flow_index": 0.004469946958124638,
+      "month_sin": 0.00016045194934122264,
+      "season": 9.442315786145627e-05,
+      "month_cos": 7.235095836222172e-05,
+      "rainfall": 6.0869431763421744e-05
+    }
+  }
+}

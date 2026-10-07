@@ -1,0 +1,692 @@
+{
+  "MP-901": {
+    "package_id": "MP-901",
+    "asset_id": "B-601",
+    "timestamp": "2026-07-28T16:47:08.468402",
+    "selected_plan": "Plan C",
+    "reasoning": "Battery display warning cell thermal runaway hazard. Load reduced by 40% and cooling activated to stabilize pack temperature.",
+    "recommended_date": "2026-07-29T10:00:00",
+    "estimated_downtime_hours": 0.0,
+    "estimated_cost": 0.0,
+    "required_technicians": [],
+    "required_tools": [],
+    "safety_checklist": [
+      "Confirm command dispatch received by battery controller"
+    ],
+    "approved": true,
+    "approved_by": "Grid Orchestrator",
+    "status": "InProgress",
+    "execution_log": [
+      "2026-07-28T22:00:00Z - Plan C active. Charging limited to 50A."
+    ]
+  },
+  "MP-902": {
+    "package_id": "MP-902",
+    "asset_id": "T-101",
+    "timestamp": "2026-07-28T16:47:08.468440",
+    "selected_plan": "Plan B",
+    "reasoning": "Transformer oil temperature rises past warning. Continue monitoring and inspect cooling fan operations.",
+    "recommended_date": "2026-08-05T08:00:00",
+    "estimated_downtime_hours": 1.5,
+    "estimated_cost": 450.0,
+    "required_technicians": [
+      "Substation Electrician"
+    ],
+    "required_tools": [
+      "Thermal IR Camera",
+      "Multimeter"
+    ],
+    "safety_checklist": [
+      "Wear insulating safety gloves",
+      "Verify neutral line grounding"
+    ],
+    "approved": false,
+    "approved_by": null,
+    "status": "Pending",
+    "execution_log": []
+  },
+  "MP-07282217": {
+    "package_id": "MP-07282217",
+    "asset_id": "B-601",
+    "timestamp": "2026-07-28T16:47:44.362461",
+    "selected_plan": "Plan B",
+    "reasoning": "Thermal monitoring flags battery cell overheating. Imbalance between cells is exceeding 80mV. | Recommendation: Isolate battery rack",
+    "recommended_date": "2026-08-27T16:47:44.362446",
+    "estimated_downtime_hours": 0.0,
+    "estimated_cost": 200.0,
+    "required_technicians": [
+      "Battery Cell Operations Engineer"
+    ],
+    "required_tools": [
+      "High voltage insulated toolset",
+      "Thermal imaging camera"
+    ],
+    "safety_checklist": [
+      "Verify electrical isolation of the target unit.",
+      "Verify grounding lines are securely connected.",
+      "Confirm presence of required safety PPE.",
+      "Confirm battery charge loop is electrically isolated."
+    ],
+    "approved": false,
+    "approved_by": null,
+    "status": "Pending",
+    "execution_log": []
+  },
+  "MP-07282218": {
+    "package_id": "MP-07282218",
+    "asset_id": "L-301",
+    "timestamp": "2026-07-28T16:48:56.323116",
+    "selected_plan": "Plan B",
+    "reasoning": "All telemetry sensors are within nominal tolerances. Core operations are stable. | Recommendation: Continue continuous sensor telemetry monitoring.",
+    "recommended_date": "2026-08-27T16:48:56.323096",
+    "estimated_downtime_hours": 0.0,
+    "estimated_cost": 200.0,
+    "required_technicians": [
+      "Lead Reliability Engineer"
+    ],
+    "required_tools": [
+      "Standard Diagnostics Kit"
+    ],
+    "safety_checklist": [
+      "Verify electrical isolation of the target unit.",
+      "Verify grounding lines are securely connected.",
+      "Confirm presence of required safety PPE."
+    ],
+    "approved": false,
+    "approved_by": null,
+    "status": "Pending",
+    "execution_log": []
+  },
+  "MP-07282219": {
+    "package_id": "MP-07282219",
+    "asset_id": "L-301",
+    "timestamp": "2026-07-28T16:49:56.956708",
+    "selected_plan": "Plan B",
+    "reasoning": "All telemetry sensors are within nominal tolerances. Core operations are stable. | Recommendation: Continue continuous sensor telemetry monitoring.",
+    "recommended_date": "2026-08-27T16:49:56.956687",
+    "estimated_downtime_hours": 0.0,
+    "estimated_cost": 200.0,
+    "required_technicians": [
+      "Lead Reliability Engineer"
+    ],
+    "required_tools": [
+      "Standard Diagnostics Kit"
+    ],
+    "safety_checklist": [
+      "Verify electrical isolation of the target unit.",
+      "Verify grounding lines are securely connected.",
+      "Confirm presence of required safety PPE."
+    ],
+    "approved": false,
+    "approved_by": null,
+    "status": "Pending",
+    "execution_log": []
+  },
+  "MP-07282220": {
+    "package_id": "MP-07282220",
+    "asset_id": "L-301",
+    "timestamp": "2026-07-28T16:50:57.608432",
+    "selected_plan": "Plan B",
+    "reasoning": "All telemetry sensors are within nominal tolerances. Core operations are stable. | Recommendation: Continue continuous sensor telemetry monitoring.",
+    "recommended_date": "2026-08-27T16:50:57.608412",
+    "estimated_downtime_hours": 0.0,
+    "estimated_cost": 200.0,
+    "required_technicians": [
+      "Lead Reliability Engineer"
+    ],
+    "required_tools": [
+      "Standard Diagnostics Kit"
+    ],
+    "safety_checklist": [
+      "Verify electrical isolation of the target unit.",
+      "Verify grounding lines are securely connected.",
+      "Confirm presence of required safety PPE."
+    ],
+    "approved": false,
+    "approved_by": null,
+    "status": "Pending",
+    "execution_log": []
+  },
+  "MP-07282221": {
+    "package_id": "MP-07282221",
+    "asset_id": "L-301",
+    "timestamp": "2026-07-28T16:51:58.276207",
+    "selected_plan": "Plan B",
+    "reasoning": "All telemetry sensors are within nominal tolerances. Core operations are stable. | Recommendation: Continue continuous sensor telemetry monitoring.",
+    "recommended_date": "2026-08-27T16:51:58.276183",
+    "estimated_downtime_hours": 0.0,
+    "estimated_cost": 200.0,
+    "required_technicians": [
+      "Lead Reliability Engineer"
+    ],
+    "required_tools": [
+      "Standard Diagnostics Kit"
+    ],
+    "safety_checklist": [
+      "Verify electrical isolation of the target unit.",
+      "Verify grounding lines are securely connected.",
+      "Confirm presence of required safety PPE."
+    ],
+    "approved": false,
+    "approved_by": null,
+    "status": "Pending",
+    "execution_log": []
+  },
+  "MP-07282222": {
+    "package_id": "MP-07282222",
+    "asset_id": "L-301",
+    "timestamp": "2026-07-28T16:52:58.999092",
+    "selected_plan": "Plan B",
+    "reasoning": "All telemetry sensors are within nominal tolerances. Core operations are stable. | Recommendation: Continue continuous sensor telemetry monitoring.",
+    "recommended_date": "2026-08-27T16:52:58.999070",
+    "estimated_downtime_hours": 0.0,
+    "estimated_cost": 200.0,
+    "required_technicians": [
+      "Lead Reliability Engineer"
+    ],
+    "required_tools": [
+      "Standard Diagnostics Kit"
+    ],
+    "safety_checklist": [
+      "Verify electrical isolation of the target unit.",
+      "Verify grounding lines are securely connected.",
+      "Confirm presence of required safety PPE."
+    ],
+    "approved": false,
+    "approved_by": null,
+    "status": "Pending",
+    "execution_log": []
+  },
+  "MP-07282223": {
+    "package_id": "MP-07282223",
+    "asset_id": "L-301",
+    "timestamp": "2026-07-28T16:53:59.627473",
+    "selected_plan": "Plan B",
+    "reasoning": "All telemetry sensors are within nominal tolerances. Core operations are stable. | Recommendation: Continue continuous sensor telemetry monitoring.",
+    "recommended_date": "2026-08-27T16:53:59.627452",
+    "estimated_downtime_hours": 0.0,
+    "estimated_cost": 200.0,
+    "required_technicians": [
+      "Lead Reliability Engineer"
+    ],
+    "required_tools": [
+      "Standard Diagnostics Kit"
+    ],
+    "safety_checklist": [
+      "Verify electrical isolation of the target unit.",
+      "Verify grounding lines are securely connected.",
+      "Confirm presence of required safety PPE."
+    ],
+    "approved": false,
+    "approved_by": null,
+    "status": "Pending",
+    "execution_log": []
+  },
+  "MP-07282224": {
+    "package_id": "MP-07282224",
+    "asset_id": "WT-401",
+    "timestamp": "2026-07-28T16:54:55.331790",
+    "selected_plan": "Plan B",
+    "reasoning": "All telemetry sensors are within nominal tolerances. Core operations are stable. | Recommendation: Continue continuous sensor telemetry monitoring.",
+    "recommended_date": "2026-08-27T16:54:55.331753",
+    "estimated_downtime_hours": 0.0,
+    "estimated_cost": 200.0,
+    "required_technicians": [
+      "Wind Turbine Tech Team"
+    ],
+    "required_tools": [
+      "Blade inspection drone",
+      "Climbing harness"
+    ],
+    "safety_checklist": [
+      "Verify electrical isolation of the target unit.",
+      "Verify grounding lines are securely connected.",
+      "Confirm presence of required safety PPE."
+    ],
+    "approved": false,
+    "approved_by": null,
+    "status": "Pending",
+    "execution_log": []
+  },
+  "MP-07282225": {
+    "package_id": "MP-07282225",
+    "asset_id": "WT-401",
+    "timestamp": "2026-07-28T16:55:56.039458",
+    "selected_plan": "Plan B",
+    "reasoning": "All telemetry sensors are within nominal tolerances. Core operations are stable. | Recommendation: Continue continuous sensor telemetry monitoring.",
+    "recommended_date": "2026-08-27T16:55:56.039437",
+    "estimated_downtime_hours": 0.0,
+    "estimated_cost": 200.0,
+    "required_technicians": [
+      "Wind Turbine Tech Team"
+    ],
+    "required_tools": [
+      "Blade inspection drone",
+      "Climbing harness"
+    ],
+    "safety_checklist": [
+      "Verify electrical isolation of the target unit.",
+      "Verify grounding lines are securely connected.",
+      "Confirm presence of required safety PPE."
+    ],
+    "approved": false,
+    "approved_by": null,
+    "status": "Pending",
+    "execution_log": []
+  },
+  "MP-07282226": {
+    "package_id": "MP-07282226",
+    "asset_id": "WT-401",
+    "timestamp": "2026-07-28T16:56:56.902020",
+    "selected_plan": "Plan B",
+    "reasoning": "All telemetry sensors are within nominal tolerances. Core operations are stable. | Recommendation: Continue continuous sensor telemetry monitoring.",
+    "recommended_date": "2026-08-27T16:56:56.901985",
+    "estimated_downtime_hours": 0.0,
+    "estimated_cost": 200.0,
+    "required_technicians": [
+      "Wind Turbine Tech Team"
+    ],
+    "required_tools": [
+      "Blade inspection drone",
+      "Climbing harness"
+    ],
+    "safety_checklist": [
+      "Verify electrical isolation of the target unit.",
+      "Verify grounding lines are securely connected.",
+      "Confirm presence of required safety PPE."
+    ],
+    "approved": false,
+    "approved_by": null,
+    "status": "Pending",
+    "execution_log": []
+  },
+  "MP-07282227": {
+    "package_id": "MP-07282227",
+    "asset_id": "WT-401",
+    "timestamp": "2026-07-28T16:57:57.537374",
+    "selected_plan": "Plan B",
+    "reasoning": "All telemetry sensors are within nominal tolerances. Core operations are stable. | Recommendation: Continue continuous sensor telemetry monitoring.",
+    "recommended_date": "2026-08-27T16:57:57.537339",
+    "estimated_downtime_hours": 0.0,
+    "estimated_cost": 200.0,
+    "required_technicians": [
+      "Wind Turbine Tech Team"
+    ],
+    "required_tools": [
+      "Blade inspection drone",
+      "Climbing harness"
+    ],
+    "safety_checklist": [
+      "Verify electrical isolation of the target unit.",
+      "Verify grounding lines are securely connected.",
+      "Confirm presence of required safety PPE."
+    ],
+    "approved": false,
+    "approved_by": null,
+    "status": "Pending",
+    "execution_log": []
+  },
+  "MP-07282228": {
+    "package_id": "MP-07282228",
+    "asset_id": "L-301",
+    "timestamp": "2026-07-28T16:58:58.085791",
+    "selected_plan": "Plan B",
+    "reasoning": "All telemetry sensors are within nominal tolerances. Core operations are stable. | Recommendation: Continue continuous sensor telemetry monitoring.",
+    "recommended_date": "2026-08-27T16:58:58.085761",
+    "estimated_downtime_hours": 0.0,
+    "estimated_cost": 200.0,
+    "required_technicians": [
+      "Lead Reliability Engineer"
+    ],
+    "required_tools": [
+      "Standard Diagnostics Kit"
+    ],
+    "safety_checklist": [
+      "Verify electrical isolation of the target unit.",
+      "Verify grounding lines are securely connected.",
+      "Confirm presence of required safety PPE."
+    ],
+    "approved": false,
+    "approved_by": null,
+    "status": "Pending",
+    "execution_log": []
+  },
+  "MP-07282229": {
+    "package_id": "MP-07282229",
+    "asset_id": "WT-401",
+    "timestamp": "2026-07-28T16:59:58.773305",
+    "selected_plan": "Plan B",
+    "reasoning": "All telemetry sensors are within nominal tolerances. Core operations are stable. | Recommendation: Continue continuous sensor telemetry monitoring.",
+    "recommended_date": "2026-08-27T16:59:58.773270",
+    "estimated_downtime_hours": 0.0,
+    "estimated_cost": 200.0,
+    "required_technicians": [
+      "Wind Turbine Tech Team"
+    ],
+    "required_tools": [
+      "Blade inspection drone",
+      "Climbing harness"
+    ],
+    "safety_checklist": [
+      "Verify electrical isolation of the target unit.",
+      "Verify grounding lines are securely connected.",
+      "Confirm presence of required safety PPE."
+    ],
+    "approved": false,
+    "approved_by": null,
+    "status": "Pending",
+    "execution_log": []
+  },
+  "MP-07282230": {
+    "package_id": "MP-07282230",
+    "asset_id": "WT-401",
+    "timestamp": "2026-07-28T17:00:59.491423",
+    "selected_plan": "Plan B",
+    "reasoning": "All telemetry sensors are within nominal tolerances. Core operations are stable. | Recommendation: Continue continuous sensor telemetry monitoring.",
+    "recommended_date": "2026-08-27T17:00:59.491400",
+    "estimated_downtime_hours": 0.0,
+    "estimated_cost": 200.0,
+    "required_technicians": [
+      "Wind Turbine Tech Team"
+    ],
+    "required_tools": [
+      "Blade inspection drone",
+      "Climbing harness"
+    ],
+    "safety_checklist": [
+      "Verify electrical isolation of the target unit.",
+      "Verify grounding lines are securely connected.",
+      "Confirm presence of required safety PPE."
+    ],
+    "approved": false,
+    "approved_by": null,
+    "status": "Pending",
+    "execution_log": []
+  },
+  "MP-07282231": {
+    "package_id": "MP-07282231",
+    "asset_id": "WT-401",
+    "timestamp": "2026-07-28T17:01:55.013471",
+    "selected_plan": "Plan B",
+    "reasoning": "All telemetry sensors are within nominal tolerances. Core operations are stable. | Recommendation: Continue continuous sensor telemetry monitoring.",
+    "recommended_date": "2026-08-27T17:01:55.013450",
+    "estimated_downtime_hours": 0.0,
+    "estimated_cost": 200.0,
+    "required_technicians": [
+      "Wind Turbine Tech Team"
+    ],
+    "required_tools": [
+      "Blade inspection drone",
+      "Climbing harness"
+    ],
+    "safety_checklist": [
+      "Verify electrical isolation of the target unit.",
+      "Verify grounding lines are securely connected.",
+      "Confirm presence of required safety PPE."
+    ],
+    "approved": false,
+    "approved_by": null,
+    "status": "Pending",
+    "execution_log": []
+  },
+  "MP-07282232": {
+    "package_id": "MP-07282232",
+    "asset_id": "WT-401",
+    "timestamp": "2026-07-28T17:02:55.625059",
+    "selected_plan": "Plan B",
+    "reasoning": "All telemetry sensors are within nominal tolerances. Core operations are stable. | Recommendation: Continue continuous sensor telemetry monitoring.",
+    "recommended_date": "2026-08-27T17:02:55.625023",
+    "estimated_downtime_hours": 0.0,
+    "estimated_cost": 200.0,
+    "required_technicians": [
+      "Wind Turbine Tech Team"
+    ],
+    "required_tools": [
+      "Blade inspection drone",
+      "Climbing harness"
+    ],
+    "safety_checklist": [
+      "Verify electrical isolation of the target unit.",
+      "Verify grounding lines are securely connected.",
+      "Confirm presence of required safety PPE."
+    ],
+    "approved": false,
+    "approved_by": null,
+    "status": "Pending",
+    "execution_log": []
+  },
+  "MP-07282233": {
+    "package_id": "MP-07282233",
+    "asset_id": "WT-401",
+    "timestamp": "2026-07-28T17:03:56.229008",
+    "selected_plan": "Plan B",
+    "reasoning": "All telemetry sensors are within nominal tolerances. Core operations are stable. | Recommendation: Continue continuous sensor telemetry monitoring.",
+    "recommended_date": "2026-08-27T17:03:56.228986",
+    "estimated_downtime_hours": 0.0,
+    "estimated_cost": 200.0,
+    "required_technicians": [
+      "Wind Turbine Tech Team"
+    ],
+    "required_tools": [
+      "Blade inspection drone",
+      "Climbing harness"
+    ],
+    "safety_checklist": [
+      "Verify electrical isolation of the target unit.",
+      "Verify grounding lines are securely connected.",
+      "Confirm presence of required safety PPE."
+    ],
+    "approved": false,
+    "approved_by": null,
+    "status": "Pending",
+    "execution_log": []
+  },
+  "MP-07282234": {
+    "package_id": "MP-07282234",
+    "asset_id": "WT-401",
+    "timestamp": "2026-07-28T17:04:56.811316",
+    "selected_plan": "Plan B",
+    "reasoning": "All telemetry sensors are within nominal tolerances. Core operations are stable. | Recommendation: Continue continuous sensor telemetry monitoring.",
+    "recommended_date": "2026-08-27T17:04:56.811293",
+    "estimated_downtime_hours": 0.0,
+    "estimated_cost": 200.0,
+    "required_technicians": [
+      "Wind Turbine Tech Team"
+    ],
+    "required_tools": [
+      "Blade inspection drone",
+      "Climbing harness"
+    ],
+    "safety_checklist": [
+      "Verify electrical isolation of the target unit.",
+      "Verify grounding lines are securely connected.",
+      "Confirm presence of required safety PPE."
+    ],
+    "approved": false,
+    "approved_by": null,
+    "status": "Pending",
+    "execution_log": []
+  },
+  "MP-07282235": {
+    "package_id": "MP-07282235",
+    "asset_id": "WT-401",
+    "timestamp": "2026-07-28T17:05:57.433253",
+    "selected_plan": "Plan B",
+    "reasoning": "All telemetry sensors are within nominal tolerances. Core operations are stable. | Recommendation: Continue continuous sensor telemetry monitoring.",
+    "recommended_date": "2026-08-27T17:05:57.433229",
+    "estimated_downtime_hours": 0.0,
+    "estimated_cost": 200.0,
+    "required_technicians": [
+      "Wind Turbine Tech Team"
+    ],
+    "required_tools": [
+      "Blade inspection drone",
+      "Climbing harness"
+    ],
+    "safety_checklist": [
+      "Verify electrical isolation of the target unit.",
+      "Verify grounding lines are securely connected.",
+      "Confirm presence of required safety PPE."
+    ],
+    "approved": false,
+    "approved_by": null,
+    "status": "Pending",
+    "execution_log": []
+  },
+  "MP-07282236": {
+    "package_id": "MP-07282236",
+    "asset_id": "WT-401",
+    "timestamp": "2026-07-28T17:06:57.996335",
+    "selected_plan": "Plan B",
+    "reasoning": "All telemetry sensors are within nominal tolerances. Core operations are stable. | Recommendation: Continue continuous sensor telemetry monitoring.",
+    "recommended_date": "2026-08-27T17:06:57.996314",
+    "estimated_downtime_hours": 0.0,
+    "estimated_cost": 200.0,
+    "required_technicians": [
+      "Wind Turbine Tech Team"
+    ],
+    "required_tools": [
+      "Blade inspection drone",
+      "Climbing harness"
+    ],
+    "safety_checklist": [
+      "Verify electrical isolation of the target unit.",
+      "Verify grounding lines are securely connected.",
+      "Confirm presence of required safety PPE."
+    ],
+    "approved": false,
+    "approved_by": null,
+    "status": "Pending",
+    "execution_log": []
+  },
+  "MP-07282237": {
+    "package_id": "MP-07282237",
+    "asset_id": "WT-401",
+    "timestamp": "2026-07-28T17:07:58.623602",
+    "selected_plan": "Plan B",
+    "reasoning": "All telemetry sensors are within nominal tolerances. Core operations are stable. | Recommendation: Continue continuous sensor telemetry monitoring.",
+    "recommended_date": "2026-08-27T17:07:58.623579",
+    "estimated_downtime_hours": 0.0,
+    "estimated_cost": 200.0,
+    "required_technicians": [
+      "Wind Turbine Tech Team"
+    ],
+    "required_tools": [
+      "Blade inspection drone",
+      "Climbing harness"
+    ],
+    "safety_checklist": [
+      "Verify electrical isolation of the target unit.",
+      "Verify grounding lines are securely connected.",
+      "Confirm presence of required safety PPE."
+    ],
+    "approved": false,
+    "approved_by": null,
+    "status": "Pending",
+    "execution_log": []
+  },
+  "MP-07282238": {
+    "package_id": "MP-07282238",
+    "asset_id": "WT-401",
+    "timestamp": "2026-07-28T17:08:59.230030",
+    "selected_plan": "Plan B",
+    "reasoning": "All telemetry sensors are within nominal tolerances. Core operations are stable. | Recommendation: Continue continuous sensor telemetry monitoring.",
+    "recommended_date": "2026-08-27T17:08:59.230009",
+    "estimated_downtime_hours": 0.0,
+    "estimated_cost": 200.0,
+    "required_technicians": [
+      "Wind Turbine Tech Team"
+    ],
+    "required_tools": [
+      "Blade inspection drone",
+      "Climbing harness"
+    ],
+    "safety_checklist": [
+      "Verify electrical isolation of the target unit.",
+      "Verify grounding lines are securely connected.",
+      "Confirm presence of required safety PPE."
+    ],
+    "approved": false,
+    "approved_by": null,
+    "status": "Pending",
+    "execution_log": []
+  },
+  "MP-07282239": {
+    "package_id": "MP-07282239",
+    "asset_id": "WT-401",
+    "timestamp": "2026-07-28T17:09:59.826115",
+    "selected_plan": "Plan B",
+    "reasoning": "All telemetry sensors are within nominal tolerances. Core operations are stable. | Recommendation: Continue continuous sensor telemetry monitoring.",
+    "recommended_date": "2026-08-27T17:09:59.826095",
+    "estimated_downtime_hours": 0.0,
+    "estimated_cost": 200.0,
+    "required_technicians": [
+      "Wind Turbine Tech Team"
+    ],
+    "required_tools": [
+      "Blade inspection drone",
+      "Climbing harness"
+    ],
+    "safety_checklist": [
+      "Verify electrical isolation of the target unit.",
+      "Verify grounding lines are securely connected.",
+      "Confirm presence of required safety PPE."
+    ],
+    "approved": false,
+    "approved_by": null,
+    "status": "Pending",
+    "execution_log": []
+  },
+  "MP-07282240": {
+    "package_id": "MP-07282240",
+    "asset_id": "WT-401",
+    "timestamp": "2026-07-28T17:10:55.409943",
+    "selected_plan": "Plan B",
+    "reasoning": "All telemetry sensors are within nominal tolerances. Core operations are stable. | Recommendation: Continue continuous sensor telemetry monitoring.",
+    "recommended_date": "2026-08-27T17:10:55.409919",
+    "estimated_downtime_hours": 0.0,
+    "estimated_cost": 200.0,
+    "required_technicians": [
+      "Wind Turbine Tech Team"
+    ],
+    "required_tools": [
+      "Blade inspection drone",
+      "Climbing harness"
+    ],
+    "safety_checklist": [
+      "Verify electrical isolation of the target unit.",
+      "Verify grounding lines are securely connected.",
+      "Confirm presence of required safety PPE."
+    ],
+    "approved": false,
+    "approved_by": null,
+    "status": "Pending",
+    "execution_log": []
+  },
+  "MP-07282241": {
+    "package_id": "MP-07282241",
+    "asset_id": "WT-401",
+    "timestamp": "2026-07-28T17:11:30.738875",
+    "selected_plan": "Plan B",
+    "reasoning": "All telemetry sensors are within nominal tolerances. Core operations are stable. | Recommendation: Continue continuous sensor telemetry monitoring.",
+    "recommended_date": "2026-08-27T17:11:30.738853",
+    "estimated_downtime_hours": 0.0,
+    "estimated_cost": 200.0,
+    "required_technicians": [
+      "Wind Turbine Tech Team"
+    ],
+    "required_tools": [
+      "Blade inspection drone",
+      "Climbing harness"
+    ],
+    "safety_checklist": [
+      "Verify electrical isolation of the target unit.",
+      "Verify grounding lines are securely connected.",
+      "Confirm presence of required safety PPE."
+    ],
+    "approved": false,
+    "approved_by": null,
+    "status": "Pending",
+    "execution_log": []
+  }
+}

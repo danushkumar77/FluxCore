@@ -1,0 +1,12 @@
+[
+    {
+        "code": "CARBON-RULE-INTENSITY",
+        "title": "Grid Carbon Intensity Minimization",
+        "description": "Requires shifting load or charging battery when grid carbon intensity is under standard thresholds.",
+        "tags": ["carbon", "environment", "optimization"],
+        "parameters": {
+            "target_intensity_g_kwh": 150.0,
+            "high_carbon_intensity_trigger_g_kwh": 300.0
+        }
+    }
+]

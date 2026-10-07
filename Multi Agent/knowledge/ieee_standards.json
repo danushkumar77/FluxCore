@@ -1,0 +1,24 @@
+[
+    {
+        "code": "IEEE-1547",
+        "title": "Standard for Interconnection and Interoperability of Distributed Energy Resources",
+        "description": "Establishes physical performance thresholds for interconnecting grid resources, voltage ride-through limits, and grid support requirements.",
+        "tags": ["interconnection", "safety", "grid"],
+        "parameters": {
+            "overvoltage_trip_pu": 1.10,
+            "undervoltage_trip_pu": 0.88,
+            "overfrequency_trip_hz": 52.0,
+            "underfrequency_trip_hz": 47.5
+        }
+    },
+    {
+        "code": "IEEE-1159",
+        "title": "Recommended Practice for Monitoring Electric Power Quality",
+        "description": "Defines physical criteria for power quality monitoring, voltage sags, swells, transients, and harmonic distortion.",
+        "tags": ["power_quality", "monitoring"],
+        "parameters": {
+            "sag_duration_max_ms": 500,
+            "swell_threshold_pu": 1.15
+        }
+    }
+]

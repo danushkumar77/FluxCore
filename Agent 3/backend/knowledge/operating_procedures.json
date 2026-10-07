@@ -1,0 +1,19 @@
+{
+  "procedures": [
+    {
+      "id": "SOP-SOLAR-SURPLUS",
+      "name": "Solar Surplus Capture",
+      "description": "Prioritize charging BESS when solar generation exceeds local load consumption to capture carbon-free energy."
+    },
+    {
+      "id": "SOP-PEAK-SHAVING",
+      "name": "Peak Demand Shaving",
+      "description": "Discharge batteries to reduce site load demand during high electricity market tariff periods."
+    },
+    {
+      "id": "SOP-ENERGY-ARBITRAGE",
+      "name": "Market Arbitrage Trading",
+      "description": "Optimize economic returns by charging the battery when prices are low/negative and discharging when prices are high."
+    }
+  ]
+}

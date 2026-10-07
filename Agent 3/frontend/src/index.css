@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Share+Tech+Mono&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg-primary: #07141F;
+  --bg-secondary: #0b1a27;
+  
+  /* Apple Vision Pro Glassmorphism */
+  --glass-bg: rgba(17, 35, 49, 0.45);
+  --glass-bg-hover: rgba(22, 45, 62, 0.65);
+  --glass-border: rgba(255, 255, 255, 0.06);
+  --glass-border-hover: rgba(0, 200, 255, 0.25);
+  --glass-glow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  
+  --text-primary: #FFFFFF;
+  --text-secondary: #90A4AE;
+  --text-muted: #53697D;
+  
+  /* FluxCore Theme Palette */
+  --battery-green: #00E676;
+  --energy-cyan: #00C8FF;
+  --ai-purple: #7C4DFF;
+  --warning-orange: #FF9800;
+  --critical-red: #F44336;
+  --success-green: #4CAF50;
+  --grid-blue: #29B6F6;
+  
+  --glow-green: 0 0 20px rgba(0, 230, 118, 0.3);
+  --glow-cyan: 0 0 20px rgba(0, 200, 255, 0.3);
+  --glow-purple: 0 0 20px rgba(124, 77, 255, 0.3);
+  --glow-red: 0 0 20px rgba(244, 67, 54, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  /* Glowing Grid Background */
+  background-image: 
+    linear-gradient(rgba(0, 200, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 200, 255, 0.03) 1px, transparent 1px);
+  background-size: 30px 30px;
+  background-position: center;
+}
+
+/* High density Mission Control elements */
+.control-deck {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  padding: 12px;
+  gap: 12px;
+}
+
+.mission-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(25px) saturate(190%);
+  -webkit-backdrop-filter: blur(25px) saturate(190%);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  box-shadow: var(--glass-glow);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.mission-panel:hover {
+  background: var(--glass-bg-hover);
+  border-color: var(--glass-border-hover);
+}
+
+.tech-font {
+  font-family: 'Share Tech Mono', monospace;
+}
+
+/* 3D Plant CSS Visualizer */
+.scene-3d {
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-3d {
+  transform-style: preserve-3d;
+  transform: rotateX(60deg) rotateY(0deg) rotateZ(-40deg);
+  transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  width: 320px;
+  height: 160px;
+}
+
+.container-3d:hover {
+  transform: rotateX(55deg) rotateY(0deg) rotateZ(-30deg) scale(1.05);
+}
+
+/* 3D Box Sides */
+.face {
+  position: absolute;
+  border: 1.5px solid var(--energy-cyan);
+  background: rgba(17, 35, 49, 0.85);
+  box-shadow: 0 0 10px rgba(0, 200, 255, 0.15);
+}
+
+.face-top {
+  width: 320px;
+  height: 160px;
+  transform: rotateX(0deg) translateZ(80px);
+  background: rgba(11, 26, 39, 0.9);
+  border: 2px solid var(--energy-cyan);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 10px;
+  gap: 8px;
+}
+
+.face-front {
+  width: 320px;
+  height: 80px;
+  transform: rotateX(-90deg) translateY(40px) translateZ(80px);
+  transform-origin: bottom center;
+}
+
+.face-left {
+  width: 160px;
+  height: 80px;
+  transform: rotateY(90deg) rotateZ(-90deg) translateZ(-80px) translateY(80px);
+  transform-origin: bottom left;
+}
+
+/* Neon Scanning effects */
+@keyframes grid-scan {
+  0% { transform: translateY(-100%); opacity: 0; }
+  50% { opacity: 0.8; }
+  100% { transform: translateY(100%); opacity: 0; }
+}
+
+.scanner-beam {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--energy-cyan), transparent);
+  box-shadow: 0 0 8px var(--energy-cyan);
+  animation: grid-scan 3s infinite linear;
+  pointer-events: none;
+}
+
+/* Energy Particle animations */
+@keyframes flow-left-to-right {
+  0% { left: 0%; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { left: 100%; opacity: 0; }
+}
+
+.flow-dot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--energy-cyan);
+  box-shadow: var(--glow-cyan);
+  animation: flow-left-to-right 2s infinite linear;
+}
+
+/* UI switches */
+.override-active {
+  border-color: var(--critical-red) !important;
+  box-shadow: var(--glow-red) !important;
+}
+
+.glow-active-green {
+  box-shadow: var(--glow-green) !important;
+}
+
+/* Scrollbar rules for dashboard */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 200, 255, 0.15);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--energy-cyan);
+}
+
+.scrollable-feed {
+  overflow-y: auto;
+  max-height: 100%;
+}

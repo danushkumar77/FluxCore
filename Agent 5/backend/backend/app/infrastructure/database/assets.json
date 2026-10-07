@@ -1,0 +1,160 @@
+{
+  "T-101": {
+    "id": "T-101",
+    "name": "Substation Alpha Main Transformer",
+    "type": "Transformer",
+    "station": "Substation Alpha",
+    "installation_date": "2018-05-12",
+    "status": "Healthy",
+    "health_index": 100.0,
+    "criticality_score": 91.0,
+    "risk_score": 12.773703703703703,
+    "last_updated": "2026-07-28T16:47:08.467405",
+    "telemetry": {
+      "oil_temp": 99.84107846326988,
+      "winding_temp": 105.84493139492719,
+      "h2_gas": 203.40892681009336,
+      "c2h2_gas": 10.340215749901036,
+      "ch4_gas": 62.0,
+      "c2h4_gas": 45.0,
+      "breakdown_voltage": 30.0,
+      "moisture": 19.5,
+      "pd_level": 92.0,
+      "vibration": 2.1,
+      "load_factor": 84.0
+    }
+  },
+  "T-102": {
+    "id": "T-102",
+    "name": "Substation Beta Auxiliary Transformer",
+    "type": "Transformer",
+    "station": "Substation Beta",
+    "installation_date": "2020-09-08",
+    "status": "Healthy",
+    "health_index": 100.0,
+    "criticality_score": 50.0,
+    "risk_score": 0.5,
+    "last_updated": "2026-07-28T16:47:08.467450",
+    "telemetry": {
+      "oil_temp": 70.24044368489255,
+      "winding_temp": 81.7531259310932,
+      "h2_gas": 122.39963276536331,
+      "c2h2_gas": 0.1,
+      "ch4_gas": 5.0,
+      "c2h4_gas": 2.5,
+      "breakdown_voltage": 68.0,
+      "moisture": 11.2,
+      "pd_level": 42.0,
+      "vibration": 1.1,
+      "load_factor": 52.0
+    }
+  },
+  "CB-201": {
+    "id": "CB-201",
+    "name": "Alpha Busbar 1 Interrupter",
+    "type": "CircuitBreaker",
+    "station": "Substation Alpha",
+    "installation_date": "2015-11-22",
+    "status": "Healthy",
+    "health_index": 100.0,
+    "criticality_score": 91.0,
+    "risk_score": 0.91,
+    "last_updated": "2026-07-28T16:47:08.467462",
+    "telemetry": {
+      "switching_operations": 848.0,
+      "contact_wear": 29.938690475833326,
+      "operation_time": 53.617833534607,
+      "sf6_pressure": 4.934630444289503,
+      "coil_current": 2.85,
+      "ambient_temp": 24.5
+    }
+  },
+  "L-301": {
+    "id": "L-301",
+    "name": "Alpha-Beta Link Transmission Line",
+    "type": "TransmissionLine",
+    "station": "Grid Segment West",
+    "installation_date": "2010-06-15",
+    "status": "Warning",
+    "health_index": 55.0,
+    "criticality_score": 86.0,
+    "risk_score": 7.739999999999999,
+    "last_updated": "2026-07-28T16:47:08.467479",
+    "telemetry": {
+      "conductor_temp": 110.0,
+      "sag": 3.7804652307966173,
+      "wind_speed": 4.8,
+      "current_load": 985.1902435502236,
+      "mechanical_tension": 24.5,
+      "leakage_current": 0.38,
+      "ambient_temp": 22.0
+    }
+  },
+  "WT-401": {
+    "id": "WT-401",
+    "name": "FluxWind Turbine #04",
+    "type": "Renewable",
+    "station": "FluxWind Array West",
+    "installation_date": "2021-03-30",
+    "status": "Warning",
+    "health_index": 55.0,
+    "criticality_score": 64.0,
+    "risk_score": 5.357037037037037,
+    "last_updated": "2026-07-28T16:47:08.467497",
+    "telemetry": {
+      "rotor_speed": 19.53245261687498,
+      "turbine_vibration": 0.718432504007222,
+      "gearbox_oil_temp": 105.22030412567358,
+      "blade_pitch_angle": 3.8,
+      "power_output": 2.678062353178612,
+      "nacelle_temp": 48.0,
+      "ambient_temp": 21.5
+    },
+    "subtype": "Wind"
+  },
+  "PV-501": {
+    "id": "PV-501",
+    "name": "FluxSolar Array Core Inverter 1",
+    "type": "Renewable",
+    "station": "FluxSolar Flatlands",
+    "installation_date": "2022-07-14",
+    "status": "Healthy",
+    "health_index": 100.0,
+    "criticality_score": 50.0,
+    "risk_score": 0.0,
+    "last_updated": "2026-07-28T16:47:08.467510",
+    "telemetry": {
+      "panel_temp": 51.99124692412509,
+      "inverter_efficiency": 96.8,
+      "string_current": 8.8,
+      "irradiance": 1100.0,
+      "dc_voltage": 630.0,
+      "dust_degradation": 2.1075973951952434,
+      "power_output": 0.35,
+      "ambient_temp": 26.0
+    },
+    "subtype": "Solar"
+  },
+  "B-601": {
+    "id": "B-601",
+    "name": "Substation Alpha Battery Bank A",
+    "type": "Battery",
+    "station": "Substation Alpha",
+    "installation_date": "2023-01-20",
+    "status": "Healthy",
+    "health_index": 100.0,
+    "criticality_score": 91.0,
+    "risk_score": 0.0,
+    "last_updated": "2026-07-28T16:47:08.467519",
+    "telemetry": {
+      "soc": 79.16666666666671,
+      "soh": 84.94472054565024,
+      "cell_temp": 31.108001431820636,
+      "max_cell_voltage": 4.140038566539288,
+      "min_cell_voltage": 4.10377527829478,
+      "internal_resistance": 28.580936121163525,
+      "charge_cycles": 1153.0,
+      "current_draw": -50.0
+    }
+  }
+}
